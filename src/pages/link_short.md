@@ -2,11 +2,11 @@
     title: Link Shortener - Express JS 
     permalink: /link_short/
     tags: js
-    img: images/express_link_shortener.png
+    img: /images/express_link_shortener.png
 ---
-## Link Shortener - Express JS
+# Link Shortener - Express JS
 
-[<img src="images/express_link_shortener.png"/>](/images/express_link_shortener.png)
+[<img src="{{ img | url }}"/>]({{ img | url }})
 
 - [Link to website](http://sh.khusyasy.xyz/)
 - [Link to repository](https://github.com/Khusyasy/link-short)

@@ -2,11 +2,11 @@
     title: Random Quotes App - React JS 
     permalink: /random_quotes/
     tags: js
-    img: images/react_quotes.png
+    img: /images/react_quotes.png
 ---
-## Random Quotes App - React JS
+# Random Quotes App - React JS
 
-[<img src="images/react_quotes.png"/>](/images/react_quotes.png)
+[<img src="{{ img | url }}"/>]({{ img | url }})
 
 - [Link to website](http://quotes.khusyasy.xyz/)
 - [Link to repository](https://github.com/Khusyasy/random-quotes)

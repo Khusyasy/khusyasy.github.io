@@ -2,11 +2,11 @@
     title: Link Shortener v2 - React JS 
     permalink: /link_short_v2/
     tags: js
-    img: images/react_link_shortener.png
+    img: /images/react_link_shortener.png
 ---
-## Link Shortener v2 - React JS
+# Link Shortener v2 - React JS
 
-[<img src="images/react_link_shortener.png"/>](/images/react_link_shortener.png)
+[<img src="{{ img | url }}"/>]({{ img | url }})
 
 - [Link to website](http://sla.khusyasy.xyz/)
 - [Link to repository](https://github.com/Khusyasy/shortlink-app)
