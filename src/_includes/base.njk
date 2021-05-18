@@ -6,10 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | Khusyasy's Portofolio</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    {{ content | safe }}
+    <div class="left">
+        <h1>Profile</h1>
+        <img src="/images/logo.jpg" alt="My Photo">
+        <p>
+            Fullstack Developer
+        </p>
+        <hr>
+        <p>
+            Hello I'm Khusyasy, a self-taught Javascript Developer, mainly working with MERN stack and other Javascript
+            Framework.
+        </p>
+        <hr>
+        <a href="https://www.linkedin.com/in/Khusyasy/">View My LinkedIn Profile</a>
+        <a href="https://www.github.com/Khusyasy/">View My GitHub Profile</a>
+    </div>
+    <div class="right">
+        {{ content | safe }}
+    </div>
 </body>
 
 </html>
