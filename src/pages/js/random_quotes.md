@@ -3,6 +3,7 @@
     permalink: /random_quotes/
     tags: js
     img: /images/react_quotes.png
+    date: 2021-04-31
 ---
 # Random Quotes App - React JS
 

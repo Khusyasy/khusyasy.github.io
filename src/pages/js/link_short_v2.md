@@ -3,6 +3,7 @@
     permalink: /link_short_v2/
     tags: js
     img: /images/react_link_shortener.png
+    date: 2021-03-07
 ---
 # Link Shortener v2 - React JS
 

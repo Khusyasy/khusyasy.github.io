@@ -9,7 +9,7 @@
 ### Javascript
 ---
 
-{% for page in collections.js %}
+{% for page in collections.js reversed %}
 
 [{{ page.data.title }} <img src="{{ page.data.img }}" /> Details...]({{ page.url }})
 
