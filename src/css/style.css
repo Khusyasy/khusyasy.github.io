@@ -55,6 +55,14 @@ hr {
     opacity: 50%;
 }
 
+a {
+  color: #0b0bda;
+}
+
+a:visited {
+  color: #040449;
+}
+
 a:hover {
     font-weight: 700;
 }
@@ -65,4 +73,12 @@ img {
     width: 80ch;
     max-width: 100%;
     margin: 1rem 0;
+}
+
+ul {
+    margin: 0 2em;
+}
+
+li {
+    margin: 0.5em 0;
 }
