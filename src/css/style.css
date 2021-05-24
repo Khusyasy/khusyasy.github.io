@@ -112,13 +112,17 @@ img {
     margin: 1rem auto;
 }
 
-ul {
-    margin: 0 2em;
+ul, ol {
+    margin: 1rem 2em;
 }
 
 li {
     color: #060679;
     margin: 0.5em 0;
+}
+
+li * {
+    margin: 0;
 }
 
 nav {
