@@ -19,7 +19,7 @@
     padding: 1rem;
 }
 
-.left, .right {
+.left, .right, .full {
     display: block;
     padding: 1rem 0;
     width: 100%;
@@ -49,6 +49,11 @@
     .right {
         padding: 1rem;
         width: 70%;
+    }
+
+    .full {
+        padding: 1rem;
+        width: 100%;
     }
 
     a:hover {
@@ -134,8 +139,9 @@ nav ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    max-width: 120ch;
 }
 
 nav ul li {
