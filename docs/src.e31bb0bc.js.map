@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["document","getElementById","style","background"],"mappings":";AAAAA,SAASC,eAAe,QAAQC,MAAMC,WAAa","file":"src.e31bb0bc.js","sourceRoot":"..\\src","sourcesContent":["document.getElementById(\"root\").style.background = \"#000\";"]}
