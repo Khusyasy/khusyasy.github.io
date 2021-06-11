@@ -1,0 +1,2 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap");*{margin:0;padding:0;font-family:Roboto,sans-serif;line-height:1.6em}:root{font-size:20px}body,html{width:100%;min-height:200vh}.text-mono,.text-mono *{font-family:Source Code Pro,monospace}.jumbo{width:100%;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(66,198,255,.4)}.jumbo #typing-box{display:inline!important}
+/*# sourceMappingURL=/style.78032849.css.map */

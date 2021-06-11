@@ -13,5 +13,7 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "typed.js": "^2.0.12"
+  }
 }

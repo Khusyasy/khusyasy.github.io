@@ -1,1 +1,0 @@
-document.getElementById("root").style.background = "#000";
