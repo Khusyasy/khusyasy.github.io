@@ -4,10 +4,10 @@ import "aos/dist/aos.css";
 
 var typed = new Typed("#typing-box", {
   stringsElement: "#typing-text",
-  typeSpeed: 50,
-  startDelay: 1400,
-  backSpeed: 30,
-  backDelay: 1000,
+  typeSpeed: 30,
+  startDelay: 800,
+  backSpeed: 20,
+  backDelay: 400,
 });
 
 // AOS.init();
