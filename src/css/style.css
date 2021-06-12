@@ -5,10 +5,13 @@
   padding: 0;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6em;
+  color: var(--text-primary);
 }
 
 :root {
   font-size: 20px;
+  --primary: hsl(184, 70%, 35%);
+  --text-primary: hsl(184, 30%, 80%);
 }
 
 html, body {
@@ -17,8 +20,7 @@ html, body {
 }
 
 body {
-  background-color: rgba(26, 186, 255, 0.2);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%23000000' fill-opacity='0.09'%3E%3Cpath fill-rule='evenodd' d='M5 3.59L1.46.05.05 1.46 3.59 5 .05 8.54l1.41 1.41L5 6.41l3.54 3.54 1.41-1.41L6.41 5l3.54-3.54L8.54.05 5 3.59zM17 2h24v2H17V2zm0 4h24v2H17V6zM2 17h2v24H2V17zm4 0h2v24H6V17z'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: var(--primary);
 }
 
 .text-mono, .text-mono * {
@@ -42,7 +44,7 @@ body {
 
 [id^=section-] {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   border-bottom: solid 1px hsla(0, 0%, 50%, 0.3);
 }
 
@@ -54,8 +56,8 @@ body {
 .arrow {
   width: 1.5em;
   height: 1.5em;
-  border-bottom: solid 3px #000;
-  border-right: solid 3px #000;
+  border-bottom: solid 3px var(--text-primary);
+  border-right: solid 3px var(--text-primary);
   transform: rotate(45deg);
 }
 
@@ -75,4 +77,5 @@ body {
   width: 80%;
   height: 20vh;
   margin: 0 auto;
+  padding: 2em;
 }
