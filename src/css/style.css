@@ -10,8 +10,14 @@
 
 :root {
   font-size: 20px;
-  --primary: hsl(184, 70%, 35%);
-  --text-primary: hsl(184, 30%, 80%);
+  --primary: hsl(180, 69%, 35%);
+  --text-primary: hsl(184, 29%, 80%)
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 15px;
+  }
 }
 
 html, body {
@@ -62,15 +68,7 @@ body {
 }
 
 #section-2 {
-  justify-content: space-evenly;
-}
-
-#section-2 > *:nth-child(odd) {
-  text-align: left;
-}
-
-#section-2 > *:nth-child(even) {
-  text-align: right;
+  justify-content: flex-start;
 }
 
 #section-2 > * {
@@ -85,5 +83,11 @@ body {
 
 .profile {
   border-radius: 100%;
+  height: 12.5rem;
+  width: 12.5rem;
   border: solid 0.5em var(--text-primary);
+}
+
+#bits-2-2 {
+  max-width: 75ch;
 }
