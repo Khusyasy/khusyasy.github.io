@@ -10,8 +10,8 @@
 
 :root {
   font-size: 20px;
-  --primary: hsl(180, 69%, 35%);
-  --text-primary: hsl(184, 29%, 80%)
+  --primary: #1c9797;
+  --text-primary: #bdd9db;
 }
 
 @media (max-width: 600px) {
