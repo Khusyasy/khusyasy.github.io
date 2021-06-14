@@ -180,6 +180,7 @@ body {
   height: 100%;
   width: auto;
   max-width: 55ch;
+  min-width: 35ch;
   text-align: justify;
 }
 
