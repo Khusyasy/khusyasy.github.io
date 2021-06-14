@@ -126,12 +126,12 @@ body {
 
 #scroll-down {
   position: absolute;
-  bottom: 8vh;
+  bottom: 15vh;
 }
 
 .arrow {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.25em;
+  height: 1.25em;
   border-bottom: solid 3px var(--text-primary);
   border-right: solid 3px var(--text-primary);
   transform: rotate(45deg);
@@ -139,6 +139,7 @@ body {
 
 #section-2 {
   justify-content: center;
+  min-height: 50vh;
 }
 
 #section-2 > * {
@@ -165,8 +166,7 @@ body {
 
 #section-3 {
   justify-content: space-evenly;
-  row-gap: 4em;
-  column-gap: 2em;
+  row-gap: 1em;
 }
 
 #section-3 > * {
@@ -180,7 +180,9 @@ body {
   height: 100%;
   width: auto;
   max-width: 55ch;
-  min-width: 35ch;
+}
+
+.project-details p {
   text-align: justify;
 }
 
