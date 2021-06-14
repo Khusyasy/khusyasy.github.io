@@ -11,7 +11,7 @@
 :root {
   font-size: 20px;
   --primary: #1c9797;
-  --text-primary: #bdd9db;
+  --text-primary: #eff5f6;
 }
 
 @media (max-width: 600px) {
