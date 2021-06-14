@@ -12,6 +12,7 @@
   font-size: 20px;
   --primary: #1c9797;
   --text-primary: #eff5f6;
+  --text-secondary: #d5dbdd;
 }
 
 @media (max-width: 600px) {
@@ -41,6 +42,61 @@ body {
 
 .text-bold{
   font-weight: bold;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn {
+  all: unset;
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0.5em 0.3em;
+  margin: 0.5em 0.3em;
+  cursor: pointer;
+  border: solid 1px var(--text-primary);
+  color: var(--text-primary);
+  transition: color 200ms ease-in-out,
+              background-color 200ms ease-in-out,
+              border 200ms ease-in-out;
+}
+
+.btn-primary{
+  border: solid 1px var(--text-primary);
+  color: var(--primary);
+  background-color: var(--text-primary);
+}
+
+.btn-primary:hover {
+  border: solid 1px var(--text-primary);
+  color: var(--text-primary);
+  background-color: var(--primary);
+}
+
+.btn-secondary{
+  border: solid 1px var(--text-secondary);
+  color: var(--text-secondary);
+  background-color: var(--primary);
+}
+
+.btn-secondary:hover {
+  border: solid 1px var(--primary);
+  color: var(--primary);
+  background-color: var(--text-secondary);
+}
+
+.btn-other{
+  border: none;
+  color: var(--text-secondary);
+  background-color: var(--primary);
+}
+
+.btn-other:hover {
+  color: var(--primary);
+  background-color: var(--text-secondary);
 }
 
 [data-aos][data-aos][data-aos-delay='5000'].aos-animate {
