@@ -1,0 +1,25 @@
+{
+  "name": "personal-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"nodemon --ext md,js ./src/md-to-html.js\" \"parcel ./src/index.html\"",
+    "pages": "nodemon --ext md,js ./src/md-to-html.js",
+    "build": "node ./src/md-to-html.js && parcel build ./src/index.html --out-dir docs --no-content-hash"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^2.0.7",
+    "nodemon": "^2.0.7",
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "typed.js": "^2.0.12"
+  }
+}
