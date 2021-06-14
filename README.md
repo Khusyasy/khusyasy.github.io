@@ -1,1 +1,0 @@
-# khusyasy.github.io
