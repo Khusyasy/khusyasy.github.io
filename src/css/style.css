@@ -169,7 +169,7 @@ body {
   column-gap: 2em;
 }
 
-#section-3 [id^="bits-3-"] {
+#section-3 > * {
   flex-direction: row;
   gap: 1em;
   width: auto;
