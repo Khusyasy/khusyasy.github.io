@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"nodemon ./src/md-to-html.js\" \"parcel ./src/index.html\"",
-    "pages": "nodemon ./src/md-to-html.js",
+    "dev": "concurrently \"nodemon --ext md,js ./src/md-to-html.js\" \"parcel ./src/index.html\"",
+    "pages": "nodemon --ext md,js ./src/md-to-html.js",
     "build": "node ./src/md-to-html.js && parcel build ./src/index.html --out-dir docs --no-content-hash"
   },
   "keywords": [],

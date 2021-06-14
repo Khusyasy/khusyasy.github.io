@@ -18,15 +18,16 @@ fs.readdirSync(path.join(src_path, folder)).forEach(file => {
 
     let gm = matter(data);
     let html = layout;
+    let content = gm.content;
     for(d of Object.entries(gm.data)){
       html = html.replace(RegExp(`{[ ]*${d[0]}[ ]*}`, "g"), d[1]);
+      content = content.replace(RegExp(`{[ ]*${d[0]}[ ]*}`, "g"), d[1]);
     }
-    html = html.replace(RegExp(`{[ ]*content[ ]*}`), marked(gm.content));
+    html = html.replace(RegExp(`{[ ]*content[ ]*}`), marked(content));
 
     const write = fs.writeFileSync(path.join(src_path, folder, file_to_create), html);
-    
+
   } catch (err) {
     console.error(err)
   }
-  
 });
