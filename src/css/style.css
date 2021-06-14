@@ -137,13 +137,14 @@ body {
 }
 
 #section-2 {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 #section-2 > * {
-  width: 80%;
+  width: auto;
   margin: 0 auto;
-  padding: 1em;
+  margin: 2em;
+  text-align: justify;
 }
 
 #bits-2-1 {
