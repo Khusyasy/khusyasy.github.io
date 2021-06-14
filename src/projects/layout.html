@@ -5,8 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{ title }</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project.css">
 </head>
 <body>
-  { content }
+  <div class="flex-center">
+    <div id="project-details">
+      <a onclick="javascript:history.go(-1)" href="#">&lt; Back</a>
+      <div class="bntn-container">
+          <a class="btn btn-primary" href="#live">See Live</a>
+          <a class="btn btn-secondary" href="#source">Source Code</a>
+      </div>
+      <h1>{ title }</h1>
+      { content }
+    </div>
+  </div>
 </body>
 </html>

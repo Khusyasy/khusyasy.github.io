@@ -1,12 +1,9 @@
 ---
     title: Koding Kuiz - Vue JS
+    live: http://quiz.khusyasy.xyz/
+    repo: https://github.com/Khusyasy/koding-kuiz
 ---
-# Koding Kuiz - Vue JS
-
 [<img src="/images/koding_kuiz.png"/>](/images/koding_kuiz.png)
-
-- [Link to website](http://quiz.khusyasy.xyz/)
-- [Link to repository](https://github.com/Khusyasy/koding-kuiz)
 
 ### Project description
 KodingKuiz is a quiz game about programming, coding, and related stuff, so you can test your knowledge about the subject while having fun!.

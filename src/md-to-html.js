@@ -19,7 +19,7 @@ fs.readdirSync(path.join(src_path, folder)).forEach(file => {
     let gm = matter(data);
     let html = layout;
     for(d of Object.entries(gm.data)){
-      html = html.replace(RegExp(`{[ ]*${d[0]}[ ]*}`), d[1]);
+      html = html.replace(RegExp(`{[ ]*${d[0]}[ ]*}`, "g"), d[1]);
     }
     html = html.replace(RegExp(`{[ ]*content[ ]*}`), marked(gm.content));
 
