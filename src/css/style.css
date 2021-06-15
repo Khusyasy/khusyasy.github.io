@@ -13,6 +13,7 @@
   --primary: #1c9797;
   --text-primary: #eff5f6;
   --text-secondary: #d5dbdd;
+  --dark: #002633;
 }
 
 @media (max-width: 600px) {
@@ -121,7 +122,6 @@ body {
 [id^=section-] {
   width: 100%;
   min-height: 100vh;
-  border-bottom: solid 1px hsla(0, 0%, 50%, 0.3);
 }
 
 #scroll-down {
@@ -139,7 +139,21 @@ body {
 
 #section-2 {
   justify-content: center;
-  min-height: 50vh;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#section-2::before {
+  content: '';
+  display: inline;
+  position: absolute;
+  width: 120vw;
+  height: 90%;
+  top: 50;
+  left: 50;
+  background: var(--dark);
+  transform: rotate(2deg);
 }
 
 #section-2 > * {
