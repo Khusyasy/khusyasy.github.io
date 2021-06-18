@@ -227,7 +227,7 @@ body {
   height: 100%;
   bottom: -10%;
   background: var(--dark);
-  transform: rotate(-5deg);
+  transform: rotate(-2deg);
   z-index: -1;
 }
 
