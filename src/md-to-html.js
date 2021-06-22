@@ -39,6 +39,9 @@ fs.readdirSync(path.join(src_path, folder)).forEach(file => {
 const card_layout = fs.readFileSync(path.join(src_path, "project-card.html"), 'utf8');
 let cards = "";
 
+projects_file.sort((a,b) => a.order-b.order)
+console.log(projects_file);
+
 projects_file.forEach(project => {
   let card = card_layout;
   for(d of Object.entries(project)){
