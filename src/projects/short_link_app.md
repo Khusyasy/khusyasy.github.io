@@ -1,20 +1,23 @@
 ---
-    title: Link Shortener v2 - React JS 
+    title: Short Link App
     img: /images/react_link_shortener.png
     live: http://sla.khusyasy.xyz/
     repo: https://github.com/Khusyasy/shortlink-app
-    desc: This is a website where you can shorten your link, and use it and share shortened long links, because shortened links is easier to share.
+    desc: This is a website where you can shorten your link, and make it easier to share with your friends.
     order: 2
 ---
 [<img src="{ img }"/>]({ img })
 
 
-**Project description:** { desc }
+### Project description
+
+{ desc }
 
 ### Features
 
+- Register and Login to your account.
 - Shorten your link in just 1 click.
-- Register and Login to your account and view how many times your link has been clicked.
+- View how many times your link has been clicked.
 
 ### Objectives
 
