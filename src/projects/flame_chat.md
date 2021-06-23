@@ -1,0 +1,54 @@
+---
+    title: 🔥 Flame Chat
+    live: http://chat.khusyasy.xyz/
+    repo: https://github.com/Khusyasy/flame-chat
+    img: /images/flame_chat1.jpg
+    desc: Personal chat app built using React and Firebase!.
+    order: 1
+---
+[<img src="{ img }"/>]({ img })
+
+### Project description
+
+{ desc }
+
+### Features
+
+- Person to person private chat.
+- Register and Login using Google Auth.
+
+---
+## Objectives
+Firebase is a BaaS (Backend as a Service) owned by Google that can help developers quickly develop apps. By using firebase for backend service, I can focus more on the looks and experience or known as UI/UX of the apps. I wanted to learn more about firebase, so I decided to create a Personal Chat App.
+
+The goal of this project is:
+1. Setup Firebase and Firestore.
+2. Create UI/UX using React.
+3. Connect Firebase with React.
+
+### 1. Setup Firebase and Firestore.
+
+Because this is the first time I used Firebase, I have to learn it first. Searching through Youtube and reading the documentation.
+
+The process of creating a Firebase project is actually really simple (thanks Google), it took only a couple hours for me.
+
+### 2. Create UI/UX using React.
+
+I decided to try out React Bootstrap, it is just Bootstrap but for React. I am actually a little bit familiar with Bootstrap. This should be easy for me.
+
+[<img src="/images/flame_chat2.jpg"/>](/images/flame_chat2.jpg)
+
+I also decided to use React Context for managing some of the state like user auth and messages. That is to prevent passing props too many layers down the children element.
+
+### 3. Connect React with Firestore.
+
+This part is basically just using React with API that is provided by Firestore. Firestore handles all CRUD function. Firestore is a NoSQl database more or less like MongoDB.
+
+### Techonologies used
+
+- React JS
+- React Context
+- React Bootstrap
+- Firebase
+- Firestore
+- Google Auth
