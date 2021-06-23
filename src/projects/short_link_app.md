@@ -4,7 +4,7 @@
     live: http://sla.khusyasy.xyz/
     repo: https://github.com/Khusyasy/shortlink-app
     desc: This is a website where you can shorten your link, and make it easier to share with your friends.
-    order: 2
+    order: 3
 ---
 [<img src="{ img }"/>]({ img })
 

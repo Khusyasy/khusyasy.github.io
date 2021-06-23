@@ -4,7 +4,7 @@
     live: http://quotes.khusyasy.xyz/
     repo: https://github.com/Khusyasy/random-quotes
     desc: This is a website where you can get a random quotes.
-    order: 3
+    order: -1
 ---
 [<img src="{ img }"/>]({ img })
 

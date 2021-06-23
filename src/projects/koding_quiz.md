@@ -4,7 +4,7 @@
     repo: https://github.com/Khusyasy/koding-kuiz
     img: /images/koding_kuiz.png
     desc: A quiz game about programming, coding, and related stuff. You can test your knowledge about the subject while having fun!.
-    order: 1
+    order: 2
 ---
 [<img src="{ img }"/>]({ img })
 
