@@ -22,9 +22,12 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   [class*="flex"] {
     flex-direction: column !important;
+  }
+  .project-details {
+    width: 100% !important;
   }
 }
 
@@ -186,6 +189,7 @@ body {
 .project-details {
   height: 100%;
   width: 55ch;
+  max-width: 55ch;
 }
 
 .project-details p {
@@ -195,7 +199,7 @@ body {
 .project-image-container {
   height: 100%;
   width: auto;
-  max-width: 55ch;
+  max-width: 45ch;
   overflow: hidden;
   border-radius: 10px;
   line-height: 0;
