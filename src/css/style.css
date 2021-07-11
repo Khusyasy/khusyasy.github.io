@@ -101,10 +101,6 @@ body {
   background-color: var(--text-secondary);
 }
 
-[data-aos][data-aos][data-aos-delay='5000'].aos-animate {
-	transition-delay: 5000ms;
-}
-
 .flex-center {
   display: flex;
   flex-direction: column;
