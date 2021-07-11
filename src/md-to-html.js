@@ -5,13 +5,13 @@ const path = require("path");
 const src_path = "./src/";
 const folder = "projects";
 
-const layout = fs.readFileSync(path.join(src_path, folder, "layout.html"), 'utf8');
+const layout = fs.readFileSync(path.join(src_path, folder, "layout.src"), 'utf8');
 
 let projects_file = [];
 
 fs.readdirSync(path.join(src_path, folder)).forEach(file => {
   let [name, ext] = file.split(".");
-  if(ext !== "md") return;
+  if(ext !== "src") return;
 
   let file_to_create = name + ".html";
 
@@ -36,7 +36,7 @@ fs.readdirSync(path.join(src_path, folder)).forEach(file => {
   }
 });
 
-const card_layout = fs.readFileSync(path.join(src_path, "project-card.html"), 'utf8');
+const card_layout = fs.readFileSync(path.join(src_path, "project-card.src"), 'utf8');
 let cards = "";
 
 projects_file = projects_file.filter(e=>e.order>0);
@@ -50,7 +50,7 @@ projects_file.forEach(project => {
   cards += card + "\n";
 });
 
-let index = fs.readFileSync(path.join(src_path, "index.src.html"), 'utf8');
+let index = fs.readFileSync(path.join(src_path, "index.src"), 'utf8');
 index = index.replace(RegExp(`{[ ]*project-card[ ]*}`, "g"), cards);
 
 fs.writeFileSync(path.join(src_path, "index.html"), index);
