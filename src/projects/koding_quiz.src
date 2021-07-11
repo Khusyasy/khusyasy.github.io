@@ -6,7 +6,7 @@
     desc: A quiz game about programming, coding, and related stuff. You can test your knowledge about the subject while having fun!.
     order: 2
 ---
-[<img src="{ img }"/>]({ img })
+![{ title } images]({ img })
 
 ### Project description
 
@@ -32,7 +32,7 @@ So to sum it up, the goal of this project is:
 
 Firstly, I make a quick quiz game prototype using a framework that I'm currently learning (Vue JS), and this prototype is gonna be the very basic requirement for my quiz game, so I can visualize what would be needed for the quiz game.
 
-[<img src="/images/koding-quiz-2.png"/>](/images/koding-quiz-2.png)
+![{ title } images](/images/koding-quiz-2.png)
 
 I actually wanted to create my own API for the questions, but after a while I decided to use a public API, and I found QuizApi, and I have to modify the prototype for a bit so the structure of the quiz is compatible.
 

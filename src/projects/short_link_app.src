@@ -6,7 +6,7 @@
     desc: This is a website where you can shorten your link, and make it easier to share with your friends.
     order: 3
 ---
-[<img src="{ img }"/>]({ img })
+![{ title } images]({ img })
 
 
 ### Project description

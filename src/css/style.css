@@ -208,6 +208,10 @@ body {
   line-height: 0;
 }
 
+img {
+  cursor: pointer;
+}
+
 #section-4 {
   justify-content: center;
   overflow: hidden;

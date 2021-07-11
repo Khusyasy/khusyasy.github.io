@@ -6,7 +6,7 @@
     desc: This is a website where you can get a random quotes.
     order: -1
 ---
-[<img src="{ img }"/>]({ img })
+![{ title } images]({ img })
 
 **Project description:** { desc }
 

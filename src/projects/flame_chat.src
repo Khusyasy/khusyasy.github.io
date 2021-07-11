@@ -6,7 +6,7 @@
     desc: Personal chat app built using React and Firebase!.
     order: 1
 ---
-[<img src="{ img }"/>]({ img })
+![{ title } images]({ img })
 
 ### Project description
 
@@ -36,7 +36,7 @@ The process of creating a Firebase project is actually really simple (thanks Goo
 
 I decided to try out React Bootstrap, it is just Bootstrap but for React. I am actually a little bit familiar with Bootstrap. This should be easy for me.
 
-[<img src="/images/flame_chat2.jpg"/>](/images/flame_chat2.jpg)
+![{ title } images](/images/flame_chat2.jpg)
 
 I also decided to use React Context for managing some of the state like user auth and messages. That is to prevent passing props too many layers down the children element.
 

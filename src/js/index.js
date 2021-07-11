@@ -1,6 +1,8 @@
 import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox.css";
 
 var typed = new Typed("#typing-box", {
   stringsElement: "#typing-text",
@@ -23,3 +25,5 @@ AOS.init({
   once: false,
   mirror: true,
 });
+
+Fancybox.bind("img", {});
