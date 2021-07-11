@@ -185,8 +185,7 @@ body {
 
 .project-details {
   height: 100%;
-  width: auto;
-  max-width: 55ch;
+  width: 55ch;
 }
 
 .project-details p {
