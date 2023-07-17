@@ -2,9 +2,7 @@
   <div class="main-app">
     <div class="container">
       <Sidebar />
-      <div class="right">
-        hello test
-      </div>
+      <Content />
     </div>
   </div>
 </template>
@@ -26,14 +24,8 @@
 
 .container {
   width: 100%;
-  max-width: 80vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 8rem 0;
-}
-
-.right {
-  width: 100%;
 }
 </style>

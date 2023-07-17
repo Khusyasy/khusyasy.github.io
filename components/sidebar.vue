@@ -25,10 +25,11 @@
 .wrapper {
   display: flex;
   width: 50%;
-  height: calc(100vh - 16rem);
+  height: 100vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 8rem 0 8rem 10vw;
 }
 
 .top {
