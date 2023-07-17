@@ -1,4 +1,5 @@
 <template>
+  <Glow />
   <div class="main-app">
     <div class="container">
       <Sidebar />
@@ -8,7 +9,14 @@
 </template>
 
 <script setup lang="ts">
+function updateMouse(e: MouseEvent) {
+  store.value.mouseX = e.clientX
+  store.value.mouseY = e.clientY
+}
 
+onMounted(() => {
+  window.addEventListener('mousemove', updateMouse)
+})
 </script>
 
 <style lang="scss" scoped>
@@ -27,5 +35,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 100;
 }
 </style>

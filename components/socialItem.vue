@@ -59,7 +59,7 @@ let url = computed(() => {
 <style lang="scss">
 .socialitem {
   display: block;
-  background-color: $black;
+  background-color: transparent;
   color: $white;
   width: 40px;
   height: 40px;

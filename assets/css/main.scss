@@ -5,6 +5,11 @@
   font-size: 16px;
 }
 
+html {
+  overflow: hidden;
+}
+
 .text-highlight {
-  color: $primary-1;
+  color: $primary-1;  
+  text-shadow: 0 0 1em rgba($primary-1, 0.45);
 }
