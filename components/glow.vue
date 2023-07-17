@@ -1,10 +1,12 @@
 <template>
-  <div class="glow" ref="el" tabindex="-1"></div>
+  <div class="glow" tabindex="-1" :style="{
+    '--size': `${currSize}px`,
+    '--pos-x': `${currPos.x}px`,
+    '--pos-y': `${currPos.y}px`,
+  }"></div>
 </template>
 
 <script setup lang="ts">
-const el = ref<HTMLElement>()
-
 const currPos = ref({ x: 0, y: 0 })
 const targetPos = ref({ x: 0, y: 0 })
 
@@ -23,11 +25,6 @@ onMounted(() => {
     currPos.value.x = lerp(currPos.value.x, targetPos.value.x, 0.2)
     currPos.value.y = lerp(currPos.value.y, targetPos.value.y, 0.2)
     currSize.value = lerp(currSize.value, targetSize.value, 0.2)
-    if (el.value) {
-      el.value.style.setProperty('--size', `${currSize.value}px`)
-      el.value.style.setProperty('--pos-x', `${currPos.value.x}px`)
-      el.value.style.setProperty('--pos-y', `${currPos.value.y}px`)
-    }
   }, 10)
 })
 </script>
