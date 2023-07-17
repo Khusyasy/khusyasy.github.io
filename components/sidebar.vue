@@ -4,9 +4,10 @@
       <div>
         <h1>Hello, I'm <span class="text-highlight">Khusyasy</span></h1>
       </div>
-      <div>
-        <NavItem text="About"></NavItem>
-      </div>
+      <nav class="nav">
+        <NavItem to="#section-about" text="About"></NavItem>
+        <NavItem to="#section-experience" text="Experience"></NavItem>
+      </nav>
     </div>
     <div class="social">
       <SocialItem icon="github"></SocialItem>
@@ -35,11 +36,17 @@
 .top {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 h1 {
   font-size: 2.5em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .social {

@@ -1,11 +1,12 @@
 <template>
-  <div class="navitem">
+  <NuxtLink class="navitem" :to="to">
     {{ text }}
-  </div>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
+  to: String,
   text: String,
 })
 </script>
@@ -13,6 +14,7 @@ defineProps({
 <style lang="scss" scoped>
 .navitem {
   font-size: 2em;
+  line-height: 1;
 }
 
 .navitem::after {
