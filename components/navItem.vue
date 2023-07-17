@@ -1,7 +1,7 @@
 <template>
-  <NuxtLink class="navitem" :to="to">
+  <a class="navitem" :href="to">
     {{ text }}
-  </NuxtLink>
+  </a>
 </template>
 
 <script setup lang="ts">

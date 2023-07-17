@@ -60,11 +60,12 @@
 <style lang="scss" scoped>
 .wrapper {
   width: 100%;
-  padding: 8rem calc(10vw + 2rem) 8rem 2rem;
-  overflow-y: scroll;
+  padding: 8rem calc(10vw + 2rem) 8rem calc(40vw + 2rem);
   display: flex;
   flex-direction: column;
   gap: 8rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .section {

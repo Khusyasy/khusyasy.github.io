@@ -24,8 +24,11 @@
 
 <style lang="scss" scoped>
 .wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
   display: flex;
-  width: 50%;
+  width: 40vw;
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
