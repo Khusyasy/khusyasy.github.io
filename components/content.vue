@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" id="content-scroll">
     <div class="section" id="section-about">
       <h2 class="section-title">About</h2>
       <p class="section-text">
