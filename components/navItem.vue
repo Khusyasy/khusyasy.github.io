@@ -18,7 +18,7 @@ defineProps<{
 const router = useRouter()
 
 function handleClick(target: string) {
-  router.push(target);
+  router.replace(target);
   scrollToQuery(target)
 }
 </script>
