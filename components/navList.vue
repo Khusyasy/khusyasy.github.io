@@ -21,6 +21,7 @@ const targets = ref<Array<{
     active: false,
   },
 ])
+
 onMounted(() => {
   const targetEls = targets.value.map((target) => {
     return document.querySelector(target.target)
@@ -48,6 +49,24 @@ onMounted(() => {
       target.active = index === nearestIndex
     })
   }, 10)
+})
+
+const route = useRoute()
+const mounted = ref(false)
+
+onMounted(() => {
+  mounted.value = true
+})
+
+watchEffect(() => {
+  if (!mounted.value) return
+  targets.value.forEach((target) => {
+    if (target.target === route.hash) {
+      scrollToQuery(target.target)
+    } else if (route.hash === "") {
+      scrollToTop()
+    }
+  })
 })
 </script>
 

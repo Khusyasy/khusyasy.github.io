@@ -3,7 +3,7 @@
     navitem: true,
     active: active,
     'text-highlight': active,
-  }" :href="target" @click.prevent="() => scrollToId(target)">
+  }" :href="target" @click.prevent="handleClick(target)">
     {{ text }}
   </a>
 </template>
@@ -15,18 +15,11 @@ defineProps<{
   active: boolean,
 }>()
 
-function scrollToId(id: string) {
-  const scrollEL = document.getElementById("content-scroll");
-  const element = document.querySelector(id);
-  const headerOffset = rem(8);
-  if (scrollEL && element) {
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - headerOffset;
-    scrollEL.scrollTo({
-      top: (offsetPosition),
-      behavior: "smooth",
-    });
-  }
+const router = useRouter()
+
+function handleClick(target: string) {
+  router.push(target);
+  scrollToQuery(target)
 }
 </script>
 
