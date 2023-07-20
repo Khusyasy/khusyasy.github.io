@@ -30,7 +30,7 @@
     <div class="section" id="section-experience">
       <h2 class="section-title">Experience</h2>
       <div class="section-content">
-        <ExpItem v-for="props in experiences" :date="props.date" :content="props.content" :tags="props.tags" />
+        <ExpItem v-for="exp in experiences" :data="exp" />
       </div>
     </div>
   </div>
@@ -39,22 +39,29 @@
 <script setup lang="ts">
 const experiences: Array<{
   date: string
-  content: string
+  company?: string,
+  position: string,
+  info: string
   tags: string[]
 }> = [
     {
       date: 'Jan 2021 - Dec 2022',
-      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
+      company: 'Freelance',
+      position: 'Frontend Developer',
+      info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
       tags: ['Vue.js', 'React.js', 'JavaScript']
     },
     {
       date: 'Jan 2021 - Dec 2022',
-      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
+      position: 'Frontend Developer',
+      info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
       tags: ['Vue.js', 'React.js', 'JavaScript']
     },
     {
       date: 'Jan 2021 - Dec 2022',
-      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
+      company: 'Freelance',
+      position: 'Frontend Developer',
+      info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
       tags: ['Vue.js', 'React.js', 'JavaScript']
     },
   ]
