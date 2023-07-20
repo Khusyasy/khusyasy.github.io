@@ -3,7 +3,7 @@
     navitem: true,
     active: active,
     'text-highlight': active,
-  }" :href="target" @click.prevent="handleClick(target)">
+  }" :href="target" @click.prevent="() => handleClick(target)">
     {{ text }}
   </a>
 </template>
@@ -18,8 +18,8 @@ defineProps<{
 const router = useRouter()
 
 function handleClick(target: string) {
-  router.replace(target);
   scrollToQuery(target)
+  router.replace(target)
 }
 </script>
 

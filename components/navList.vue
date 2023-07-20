@@ -20,6 +20,11 @@ const targets = ref<Array<{
     text: "Experience",
     active: false,
   },
+  {
+    target: "#section-project",
+    text: "Projects",
+    active: false,
+  },
 ])
 
 onMounted(() => {
@@ -52,21 +57,19 @@ onMounted(() => {
 })
 
 const route = useRoute()
-const mounted = ref(false)
 
 onMounted(() => {
-  mounted.value = true
-})
-
-watchEffect(() => {
-  if (!mounted.value) return
-  targets.value.forEach((target) => {
-    if (target.target === route.hash) {
-      scrollToQuery(target.target)
-    } else if (route.hash === "") {
-      scrollToTop()
+  if (route.hash === "") {
+    scrollToTop()
+  } else {
+    for (let i = 0; i < targets.value.length; i++) {
+      const target = targets.value[i]
+      if (target.target === route.hash) {
+        scrollToQuery(target.target)
+        break
+      }
     }
-  })
+  }
 })
 </script>
 

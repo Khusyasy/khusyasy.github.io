@@ -7,25 +7,22 @@ export function rem(v: number) {
 }
 
 export function scrollToQuery(querySelector: string) {
-  const scrollEL = document.getElementById("content-scroll");
   const element = document.querySelector(querySelector);
   const headerOffset = rem(8);
-  if (scrollEL && element) {
+  const currScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+  if (element) {
     const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - headerOffset;
-    scrollEL.scrollTo({
-      top: (offsetPosition),
+    const offsetPosition = elementPosition + currScroll - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
       behavior: "smooth",
     });
   }
 }
 
 export function scrollToTop() {
-  const scrollEL = document.getElementById("content-scroll");
-  if (scrollEL) {
-    scrollEL.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }

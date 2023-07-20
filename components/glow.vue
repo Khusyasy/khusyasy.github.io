@@ -14,8 +14,8 @@ const currSize = ref(120)
 const targetSize = ref(120)
 
 watchEffect(() => {
-  targetPos.value.x = store.value.mouseX
-  targetPos.value.y = store.value.mouseY
+  targetPos.value.x = store.value.mouseX + store.value.scrollX
+  targetPos.value.y = store.value.mouseY + store.value.scrollY
   const diff = Math.abs(currPos.value.x - targetPos.value.x) + Math.abs(currPos.value.y - targetPos.value.y)
   targetSize.value = Math.max(40, 120 - (diff / 2))
 })

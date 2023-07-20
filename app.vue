@@ -14,8 +14,14 @@ function updateMouse(e: MouseEvent) {
   store.value.mouseY = e.clientY
 }
 
+function updateScroll() {
+  store.value.scrollX = window.scrollX || window.pageXOffset || document.documentElement.scrollLeft
+  store.value.scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
+}
+
 onMounted(() => {
   window.addEventListener('mousemove', updateMouse)
+  window.addEventListener('scroll', updateScroll)
 })
 </script>
 
@@ -23,7 +29,6 @@ onMounted(() => {
 .main-app {
   width: 100%;
   height: 100vh;
-  background-color: $black;
   color: $white;
   display: flex;
   flex-direction: row;
@@ -32,6 +37,7 @@ onMounted(() => {
 
 .container {
   width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: row;
   justify-content: center;

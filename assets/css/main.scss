@@ -6,7 +6,9 @@
 }
 
 html {
-  overflow: hidden;
+  background-color: $black;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .text-highlight {

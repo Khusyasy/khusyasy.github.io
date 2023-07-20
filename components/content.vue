@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" id="content-scroll">
+  <div class="wrapper">
     <div class="section" id="section-about">
       <h2 class="section-title">About</h2>
       <div class="section-content">
@@ -29,6 +29,12 @@
     </div>
     <div class="section" id="section-experience">
       <h2 class="section-title">Experience</h2>
+      <div class="section-content">
+        <ExpItem v-for="exp in experiences" :data="exp" />
+      </div>
+    </div>
+    <div class="section" id="section-project">
+      <h2 class="section-title">Recent Project / Post</h2>
       <div class="section-content">
         <ExpItem v-for="exp in experiences" :data="exp" />
       </div>
@@ -74,8 +80,6 @@ const experiences: Array<{
   display: flex;
   flex-direction: column;
   gap: 8rem;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
 }
 
 .section {
@@ -84,7 +88,7 @@ const experiences: Array<{
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out;
 }
