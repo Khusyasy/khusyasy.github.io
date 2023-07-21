@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 
 :root {
   font-family: 'Josefin Sans', sans-serif;
@@ -13,5 +13,5 @@ html {
 
 .text-highlight {
   color: $primary-1;
-  text-shadow: 0 0 1.5em rgba($primary-1, 0.65);
+  text-shadow: 0 0 1.5em rgba($primary-1, 0.5);
 }

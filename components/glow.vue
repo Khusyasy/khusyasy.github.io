@@ -27,9 +27,9 @@ watchEffect(() => {
 
 onMounted(() => {
   setInterval(() => {
-    currPos.value.x = lerp(currPos.value.x, targetPos.value.x, 0.2)
-    currPos.value.y = lerp(currPos.value.y, targetPos.value.y, 0.2)
-    currSize.value = lerp(currSize.value, targetSize.value, 0.2)
+    currPos.value.x = lerp(currPos.value.x, targetPos.value.x, 0.4)
+    currPos.value.y = lerp(currPos.value.y, targetPos.value.y, 0.4)
+    currSize.value = lerp(currSize.value, targetSize.value, 0.4)
   }, 10)
 })
 </script>

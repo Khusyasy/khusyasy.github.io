@@ -10,17 +10,19 @@
       <p>
         {{ description }}
       </p>
-      <div class="info">
-        <div>
-          {{ readable_publish_date }}
-        </div>
-        <div>
-          <IconLove size="16" />
-          {{ positive_reactions_count }}
-        </div>
-        <div>
-          <IconComment size="16" />
-          {{ comments_count }}
+      <div class="footer">
+        <div class="info">
+          <div>
+            {{ readable_publish_date }}
+          </div>
+          <div>
+            <IconLove size="16" />
+            {{ positive_reactions_count }}
+          </div>
+          <div>
+            <IconComment size="16" />
+            {{ comments_count }}
+          </div>
         </div>
         <div class="link">
           <IconLinkTo size="16" />
@@ -66,14 +68,14 @@ const {
   min-height: 7rem;
 
   &:hover {
-    background-color: rgba($black, 0.75);
-    box-shadow: 0 0 0.5rem 0.5rem rgba($primary-1, 0.15);
+    background-color: rgba($black, 0.85);
+    box-shadow: 0 0 0.25rem 0.25rem rgba($primary-1, 0.15);
 
     .image-container {
       border-color: $primary-1;
     }
 
-    .info {
+    .footer {
       color: $primary-1;
     }
   }
@@ -83,6 +85,7 @@ const {
   overflow: hidden;
   border-radius: 0.5rem;
   width: 50%;
+  max-width: 18ch;
   border: solid 2px $primary-2;
   transition: all 0.2s ease-in-out;
 
@@ -98,25 +101,36 @@ const {
   gap: 0.5em;
 }
 
+.footer {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: $primary-2;
+  transition: all 0.2s ease-in-out;
+
+
+  .link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25em;
+    text-decoration: underline;
+  }
+}
+
 .info {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1em;
-  font-size: 0.8rem;
-  color: $primary-2;
-  margin-left: auto;
-  transition: all 0.2s ease-in-out;
 
   * {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.2em;
-  }
-
-  .link {
-    text-decoration: underline;
+    gap: 0.25em;
   }
 }
 </style>

@@ -47,24 +47,24 @@ import type { Experience } from './Exp/types'
 
 const experiences: Experience[] = [
   {
-    date: 'Jan 2021 - Dec 2022',
-    company: 'Freelance',
-    position: 'Frontend Developer',
-    info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
-    tags: ['Vue.js', 'React.js', 'JavaScript']
+    date: 'Apr 2022 – Present',
+    position: 'Freelance Fullstack Developer',
+    info: 'Developed innovative solutions using Node.js and Puppeteer to scrape data. Successfully collaborated with five clients, providing solutions for their scraping and automation needs.',
+    tags: ['JavaScript', 'Typescript', 'Node.js', 'Puppeteer']
   },
   {
-    date: 'Jan 2021 - Dec 2022',
+    date: 'Aug 2021 – Apr 2022',
+    company: 'PT. Emtres Indonesia',
     position: 'Frontend Developer',
-    info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
-    tags: ['Vue.js', 'React.js', 'JavaScript']
+    info: 'Building Vue.js website focused on data management and data input. Developed many input forms with validations and unique requirements. Made significant contributions to data encoding and decoding.',
+    tags: ['JavaScript', 'Vue.js']
   },
   {
-    date: 'Jan 2021 - Dec 2022',
-    company: 'Freelance',
-    position: 'Frontend Developer',
-    info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
-    tags: ['Vue.js', 'React.js', 'JavaScript']
+    date: 'July 2021',
+    company: '@loker.programmer',
+    position: 'Frontend Website Developer, Remote Internship',
+    info: 'Designed and developed event landing pages and an E-Book sales landing page using React.js. Supported marketing efforts through visually appealing and user-friendly designs.',
+    tags: ['JavaScript', 'React.js']
   },
 ]
 </script>
@@ -72,7 +72,7 @@ const experiences: Experience[] = [
 <style lang="scss" scoped>
 .wrapper {
   width: 100%;
-  padding: 8rem calc(10vw + 2rem) 8rem calc(40vw + 2rem);
+  padding: 8rem calc(5vw + 2rem) 8rem calc(30vw + 2rem);
   display: flex;
   flex-direction: column;
   gap: 8rem;

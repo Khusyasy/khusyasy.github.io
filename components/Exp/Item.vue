@@ -40,20 +40,19 @@ const { date, company, position, info, tags } = props.data
   border-radius: 0.5rem;
 
   &:hover {
-    background-color: rgba($black, 0.75);
-    box-shadow: 0 0 0.5rem 0.5rem rgba($primary-1, 0.15);
+    background-color: rgba($black, 0.85);
+    box-shadow: 0 0 0.25rem 0.25rem rgba($primary-1, 0.15);
   }
 
   &:hover .tag {
     background-color: $primary-1;
     color: $black;
-    box-shadow: 0 0 1rem 0 rgba($primary-1, 0.25);
   }
 }
 
 h3 {
   font-weight: 400;
-  width: 50%;
+  min-width: 16ch;
   opacity: 0.8;
   font-size: 0.8rem;
 }
@@ -91,7 +90,6 @@ h4 {
   padding: 0.2em 0.5em;
   border-radius: 2em;
   font-size: 0.8rem;
-  font-weight: 400;
   transition: all 0.2s ease-in-out;
 }
 </style>

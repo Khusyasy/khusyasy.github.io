@@ -65,10 +65,10 @@ let url = computed(() => {
   height: 40px;
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
-}
 
-.socialitem:hover {
-  background-color: $white;
-  color: $black;
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
 }
 </style>
