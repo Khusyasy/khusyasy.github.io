@@ -7,10 +7,10 @@
       <NavList />
     </div>
     <div class="social">
-      <SocialItem icon="github"></SocialItem>
-      <SocialItem icon="linkedin"></SocialItem>
-      <SocialItem icon="devto"></SocialItem>
-      <SocialItem icon="twitter"></SocialItem>
+      <SidebarSocialItem icon="github"></SidebarSocialItem>
+      <SidebarSocialItem icon="linkedin"></SidebarSocialItem>
+      <SidebarSocialItem icon="devto"></SidebarSocialItem>
+      <SidebarSocialItem icon="twitter"></SidebarSocialItem>
     </div>
   </div>
 </template>
