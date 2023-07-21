@@ -49,10 +49,6 @@ const { date, company, position, info, tags } = props.data
     color: $black;
     box-shadow: 0 0 1rem 0 rgba($primary-1, 0.25);
   }
-
-  &:hover:not(:hover) {
-    opacity: 0.5;
-  }
 }
 
 h3 {

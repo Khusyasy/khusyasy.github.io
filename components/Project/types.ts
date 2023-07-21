@@ -36,3 +36,14 @@ export interface APIUser {
   profile_image: string;
   profile_image_90: string;
 }
+
+export interface Project {
+  title: string;
+  description: string;
+  url: string;
+  cover_image: string;
+  readable_publish_date: string;
+  tags: string[];
+  comments_count: number;
+  positive_reactions_count: number;
+}

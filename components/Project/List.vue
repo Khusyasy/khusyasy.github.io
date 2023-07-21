@@ -2,43 +2,29 @@
   <div v-if="pending">
     Loading...
   </div>
-  <div v-else>
-    <ProjectItem v-for="feed in feeds" :key="feed.title" :data="feed" />
-  </div>
+  <ProjectItem v-for="project in projects" :key="project.title" :data="project" />
 </template>
 
 <script setup lang="ts">
-import type { APIArticle } from './types';
+import type { APIArticle, Project } from './types';
 
-const { pending, data: res } = useLazyAsyncData('feeds', async () => $fetch('https://dev.to/api/articles?username=khusyasy') as any, { server: false })
+const { pending, data: res } = useLazyAsyncData('projects', async () => $fetch('https://dev.to/api/articles?username=khusyasy') as any, { server: false })
 
-const feeds = computed(() => {
+const projects = computed(() => {
+  if (pending.value) return ([] as Project[])
   return (res.value as APIArticle[]).slice(0, 3).map((data: APIArticle) => {
     return {
       title: data.title,
       description: data.description,
       url: data.url,
       cover_image: data.cover_image,
-      published_at: data.published_at,
+      readable_publish_date: data.readable_publish_date,
       tags: data.tag_list,
       comments_count: data.comments_count,
       positive_reactions_count: data.positive_reactions_count,
-    }
+    } as Project
   })
 })
-// const { data, pending, error, refresh } = await useFetch('https://dev.to/feed/khusyasy')
-// console.log(data, pending, error, refresh)
-  // .then((e) => e.text())
-  // .then((e) => new window.DOMParser().parseFromString(e, 'text/xml'))
-  // .then((e) => {
-  //   const t = e.querySelectorAll('item');
-  //   document
-  //     .getElementById('projects-container')
-  //     .insertAdjacentHTML(
-  //       'beforeend',
-  //       [...t].slice(0, 3).map(renderProjectCard).join('')
-  //     );
-  // });
 </script>
 
 <style lang="scss" scoped>
