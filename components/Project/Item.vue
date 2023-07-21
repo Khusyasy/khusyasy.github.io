@@ -63,6 +63,7 @@ const {
   border-radius: 0.5rem;
   text-decoration: none;
   color: $white;
+  min-height: 7rem;
 
   &:hover {
     background-color: rgba($black, 0.75);

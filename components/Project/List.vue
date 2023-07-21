@@ -1,8 +1,10 @@
 <template>
-  <div v-if="pending">
-    Loading...
-  </div>
-  <ProjectItem v-for="project in projects" :key="project.title" :data="project" />
+  <template v-if="pending">
+    <ProjectItemSkeleton v-for="n in [1, 2, 3]" :key="n" />
+  </template>
+  <template v-else>
+    <ProjectItem v-for="project in projects" :key="project.title" :data="project" />
+  </template>
 </template>
 
 <script setup lang="ts">
