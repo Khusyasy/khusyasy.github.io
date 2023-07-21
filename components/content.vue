@@ -43,34 +43,30 @@
 </template>
 
 <script setup lang="ts">
-const experiences: Array<{
-  date: string
-  company?: string,
-  position: string,
-  info: string
-  tags: string[]
-}> = [
-    {
-      date: 'Jan 2021 - Dec 2022',
-      company: 'Freelance',
-      position: 'Frontend Developer',
-      info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
-      tags: ['Vue.js', 'React.js', 'JavaScript']
-    },
-    {
-      date: 'Jan 2021 - Dec 2022',
-      position: 'Frontend Developer',
-      info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
-      tags: ['Vue.js', 'React.js', 'JavaScript']
-    },
-    {
-      date: 'Jan 2021 - Dec 2022',
-      company: 'Freelance',
-      position: 'Frontend Developer',
-      info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
-      tags: ['Vue.js', 'React.js', 'JavaScript']
-    },
-  ]
+import type { Experience } from './Exp/types'
+
+const experiences: Experience[] = [
+  {
+    date: 'Jan 2021 - Dec 2022',
+    company: 'Freelance',
+    position: 'Frontend Developer',
+    info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
+    tags: ['Vue.js', 'React.js', 'JavaScript']
+  },
+  {
+    date: 'Jan 2021 - Dec 2022',
+    position: 'Frontend Developer',
+    info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
+    tags: ['Vue.js', 'React.js', 'JavaScript']
+  },
+  {
+    date: 'Jan 2021 - Dec 2022',
+    company: 'Freelance',
+    position: 'Frontend Developer',
+    info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.Officia illo nisi alias ipsam quia necessitatibus quaerat labore ipsum tenetur quasi, neque, suscipit numquam nam! Asperiores.',
+    tags: ['Vue.js', 'React.js', 'JavaScript']
+  },
+]
 </script>
 
 <style lang="scss" scoped>

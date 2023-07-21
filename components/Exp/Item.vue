@@ -21,15 +21,9 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  data: {
-    date: string
-    company?: string,
-    position: string,
-    info: string
-    tags: string[]
-  }
-}>()
+import type { ExpItemProps } from './types'
+
+const props = defineProps<ExpItemProps>()
 
 const { date, company, position, info, tags } = props.data
 </script>

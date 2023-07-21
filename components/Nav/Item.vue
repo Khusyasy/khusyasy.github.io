@@ -9,11 +9,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  target: string,
-  text: string,
-  active: boolean,
-}>()
+import type { NavItemProps } from './types'
+
+defineProps<NavItemProps>()
 
 const router = useRouter()
 

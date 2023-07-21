@@ -36,9 +36,9 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  icon: String,
-})
+const props = defineProps<{
+  icon: 'github' | 'linkedin' | 'devto' | 'twitter',
+}>()
 
 let url = computed(() => {
   switch (props.icon) {

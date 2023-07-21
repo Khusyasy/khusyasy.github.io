@@ -5,11 +5,9 @@
 </template>
 
 <script setup lang="ts">
-const targets = ref<Array<{
-  target: string,
-  text: string,
-  active: boolean,
-}>>([
+import type { NavItemProps } from './types'
+
+const targets = ref<NavItemProps[]>([
   {
     target: "#section-about",
     text: "About",
