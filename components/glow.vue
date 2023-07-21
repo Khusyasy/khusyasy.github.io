@@ -7,6 +7,11 @@
 </template>
 
 <script setup lang="ts">
+const mouseX = useState<number>('mouseX')
+const mouseY = useState<number>('mouseY')
+const scrollX = useState<number>('scrollX')
+const scrollY = useState<number>('scrollY')
+
 const currPos = ref({ x: 0, y: 0 })
 const targetPos = ref({ x: 0, y: 0 })
 
@@ -14,8 +19,8 @@ const currSize = ref(120)
 const targetSize = ref(120)
 
 watchEffect(() => {
-  targetPos.value.x = store.value.mouseX + store.value.scrollX
-  targetPos.value.y = store.value.mouseY + store.value.scrollY
+  targetPos.value.x = mouseX.value + scrollX.value
+  targetPos.value.y = mouseY.value + scrollY.value
   const diff = Math.abs(currPos.value.x - targetPos.value.x) + Math.abs(currPos.value.y - targetPos.value.y)
   targetSize.value = Math.max(40, 120 - (diff / 2))
 })

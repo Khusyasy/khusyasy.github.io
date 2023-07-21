@@ -9,14 +9,19 @@
 </template>
 
 <script setup lang="ts">
+const mouseX = useState<number>('mouseX', () => 0)
+const mouseY = useState<number>('mouseY', () => 0)
+const scrollX = useState<number>('scrollX', () => 0)
+const scrollY = useState<number>('scrollY', () => 0)
+
 function updateMouse(e: MouseEvent) {
-  store.value.mouseX = e.clientX
-  store.value.mouseY = e.clientY
+  mouseX.value = e.clientX
+  mouseY.value = e.clientY
 }
 
 function updateScroll() {
-  store.value.scrollX = window.scrollX || window.pageXOffset || document.documentElement.scrollLeft
-  store.value.scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
+  scrollX.value = window.scrollX || window.pageXOffset || document.documentElement.scrollLeft
+  scrollY.value = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
 }
 
 onMounted(() => {
