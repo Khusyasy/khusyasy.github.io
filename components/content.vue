@@ -36,7 +36,7 @@
     <div class="section" id="section-project">
       <h2 class="section-title">Recent Project / Post</h2>
       <div class="section-content">
-        <ExpItem v-for="exp in experiences" :data="exp" />
+        <ProjectList />
       </div>
     </div>
   </div>
