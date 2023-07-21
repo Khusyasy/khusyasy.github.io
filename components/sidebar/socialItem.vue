@@ -1,5 +1,5 @@
 <template>
-  <a class="socialitem" :href="url" target="_blank">
+  <a class="socialitem" :href="url" target="_blank" :aria-label="`Link to my ${icon}`">
     <svg v-if="icon == 'github'" width="40" height="40" viewBox="0 0 40 40" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <g id="mdi:github">

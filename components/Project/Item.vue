@@ -16,16 +16,16 @@
             {{ readable_publish_date }}
           </div>
           <div>
-            <IconLove size="16" />
+            <IconLove :size="16" />
             {{ positive_reactions_count }}
           </div>
           <div>
-            <IconComment size="16" />
+            <IconComment :size="16" />
             {{ comments_count }}
           </div>
         </div>
         <div class="link">
-          <IconLinkTo size="16" />
+          <IconLinkTo :size="16" />
           dev.to
         </div>
       </div>

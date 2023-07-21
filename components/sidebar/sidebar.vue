@@ -12,7 +12,7 @@
         <SidebarSocialItem icon="twitter"></SidebarSocialItem>
       </div>
       <a class="link" href="mailto:luthfik.job@gmail.com" target="_blank" rel="noopener noreferrer">
-        <IconEmail size="16" /> luthfik.job@gmail.com
+        <IconEmail :size="16" /> luthfik.job@gmail.com
       </a>
     </div>
   </div>
