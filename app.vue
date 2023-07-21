@@ -1,6 +1,6 @@
 <template>
-  <Glow />
   <div class="main-app">
+    <Glow />
     <div class="container">
       <Sidebar />
       <Content />
