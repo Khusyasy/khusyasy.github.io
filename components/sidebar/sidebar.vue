@@ -34,22 +34,41 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 8rem 0 8rem 5vw;
+
+  @include device('mobile') {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 1rem 1rem;
+  }
 }
 
 .top {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 2rem;
 
   h1 {
     font-size: 2.5em;
+
+    @include device('mobile') {
+      text-align: center;
+    }
   }
 }
 
 .bottom {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
+
+  @include device('mobile') {
+    align-items: center;
+  }
 }
 
 .social {

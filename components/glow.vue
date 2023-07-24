@@ -47,5 +47,9 @@ onMounted(() => {
   user-select: none;
   z-index: 99;
   box-shadow: 0 0 var(--size) var(--size) rgba($primary-1, 0.15);
+
+  @include device('mobile') {
+    display: none;
+  }
 }
 </style>

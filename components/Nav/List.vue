@@ -76,5 +76,9 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @include device('mobile') {
+    display: none;
+  }
 }
 </style>

@@ -78,6 +78,11 @@ const experiences: Experience[] = [
   display: flex;
   flex-direction: column;
   gap: 8rem;
+
+  @include device('mobile') {
+    padding: 4rem 1rem;
+    gap: 4rem;
+  }
 }
 
 .section {

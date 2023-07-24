@@ -48,6 +48,12 @@ const { date, company, position, info, tags } = props.data
     background-color: $primary-1;
     color: $black;
   }
+
+  @include device('mobile') {
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.5rem;
+  }
 }
 
 h3 {
@@ -61,6 +67,7 @@ h4 {
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1;
+  text-align: left;
 
   &.company {
     color: $primary-2;

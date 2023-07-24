@@ -47,5 +47,9 @@ onMounted(() => {
   flex-direction: row;
   justify-content: center;
   z-index: 100;
+
+  @include device('mobile') {
+    flex-direction: column;
+  }
 }
 </style>

@@ -79,6 +79,12 @@ const {
       color: $primary-1;
     }
   }
+
+  @include device('mobile') {
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.5rem;
+  }
 }
 
 .image-container {
@@ -92,6 +98,11 @@ const {
   >img {
     object-fit: cover;
     height: 100%;
+  }
+
+  @include device('mobile') {
+    width: 100%;
+    max-width: 100%;
   }
 }
 

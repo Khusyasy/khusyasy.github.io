@@ -1,0 +1,19 @@
+$devices-type : (
+  mobile: "(max-width: 767px)",
+  tablet: "(min-width: 768px) and (max-width: 1023px)",
+  desktop: "(min-width: 1024px)"
+);
+
+@mixin device($type) {
+  @media #{map-get($devices-type, $type)} {
+    @content;
+  }
+}
+
+@mixin devices($types...) {
+  @each $type in $types {
+    @include device($type) {
+      @content;
+    }
+  }
+}
