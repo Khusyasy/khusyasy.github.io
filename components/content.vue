@@ -36,9 +36,7 @@
     <div class="section" id="section-project">
       <h2 class="section-title">Recent Project / Post</h2>
       <div class="section-content">
-        <ClientOnly>
-          <ProjectList />
-        </ClientOnly>
+        <ProjectList />
       </div>
     </div>
     <div class="mobile-social">

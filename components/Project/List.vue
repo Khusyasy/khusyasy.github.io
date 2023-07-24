@@ -1,9 +1,14 @@
 <template>
-  <template v-if="pending">
+  <template v-if="projects.length <= 0">
     <ProjectItemSkeleton v-for="n in [1, 2, 3]" :key="n" />
   </template>
   <template v-else>
-    <ProjectItem v-for="project in projects" :key="project.title" :data="project" />
+    <ClientOnly>
+      <ProjectItem v-for="project in projects" :key="project.title" :data="project" />
+      <template #fallback>
+        <ProjectItemSkeleton v-for="n in [4, 5, 6]" :key="n" />
+      </template>
+    </ClientOnly>
   </template>
 </template>
 
