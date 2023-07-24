@@ -77,7 +77,7 @@ const experiences: Experience[] = [
 <style lang="scss" scoped>
 .wrapper {
   width: 100%;
-  padding: 8rem calc(5vw + 2rem) 8rem calc(30vw + 2rem);
+  padding: 8rem calc(min(5vw, 6.25rem) + 2rem) 8rem calc(min(30vw, 37.5rem) + 2rem);
   display: flex;
   flex-direction: column;
   gap: 8rem;

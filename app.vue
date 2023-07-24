@@ -32,16 +32,19 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .main-app {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: max-content;
   color: $white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .container {
+  position: relative;
   width: 100%;
+  max-width: 1920px;
   height: max-content;
   display: flex;
   flex-direction: row;

@@ -15,15 +15,15 @@
 <style lang="scss" scoped>
 .wrapper {
   position: fixed;
-  left: 0;
+  left: max(0px, calc((100vw - 1920px)/2));
   top: 0;
   display: flex;
-  width: 30vw;
+  width: min(30vw, 37.5rem);
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 8rem 0 8rem 5vw;
+  padding: 8rem 0 8rem min(5vw, 6.25rem);
 
   @include device('mobile') {
     position: relative;
