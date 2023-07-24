@@ -41,6 +41,9 @@
         </ClientOnly>
       </div>
     </div>
+    <div class="mobile-social">
+      <SidebarSocialList />
+    </div>
   </div>
 </template>
 
@@ -96,7 +99,6 @@ const experiences: Experience[] = [
   transition: all 0.2s ease-in-out;
 }
 
-
 .section-title {
   font-size: 2rem;
   line-height: 1;
@@ -108,5 +110,17 @@ const experiences: Experience[] = [
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.mobile-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+
+  @include devices('tablet', 'desktop') {
+    display: none;
+  }
 }
 </style>
