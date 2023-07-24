@@ -15,14 +15,14 @@ const scrollY = useState<number>('scrollY')
 const currPos = ref({ x: 0, y: 0 })
 const targetPos = ref({ x: 0, y: 0 })
 
-const currSize = ref(120)
-const targetSize = ref(120)
+const currSize = ref(160)
+const targetSize = ref(160)
 
 watchEffect(() => {
   targetPos.value.x = mouseX.value + scrollX.value
   targetPos.value.y = mouseY.value + scrollY.value
   const diff = Math.abs(currPos.value.x - targetPos.value.x) + Math.abs(currPos.value.y - targetPos.value.y)
-  targetSize.value = Math.max(40, 120 - (diff / 2))
+  targetSize.value = Math.max(40, 160 - (diff / 2))
 })
 
 onMounted(() => {
@@ -46,7 +46,7 @@ onMounted(() => {
   overflow: hidden;
   user-select: none;
   z-index: 99;
-  box-shadow: 0 0 var(--size) var(--size) rgba($primary-1, 0.15);
+  box-shadow: 0 0 var(--size) var(--size) rgba($primary-1, 0.1);
 
   @include device('mobile') {
     display: none;
