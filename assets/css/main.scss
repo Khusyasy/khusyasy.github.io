@@ -19,3 +19,12 @@ html {
   color: $primary-1;
   text-shadow: 0 0 1.5em rgba($primary-1, 0.5);
 }
+
+.card {
+  background-color: transparent;
+
+  &:hover {
+  background-color: rgba($primary-2, 0.05);
+    box-shadow: 0 0 0.2em 0.2em rgba($primary-1, 0.15);
+  }
+}

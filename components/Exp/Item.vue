@@ -1,5 +1,5 @@
 <template>
-  <div class="experience">
+  <div class="card experience">
     <h3>
       {{ date }}
     </h3>
@@ -30,7 +30,6 @@ const { date, company, position, info, tags } = props.data
 
 <style lang="scss" scoped>
 .experience {
-  background-color: transparent;
   display: flex;
   flex-direction: row;
   gap: 1em;
@@ -38,11 +37,6 @@ const { date, company, position, info, tags } = props.data
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-in-out;
   border-radius: 0.5rem;
-
-  &:hover {
-    background-color: rgba($black, 0.85);
-    box-shadow: 0 0 0.25rem 0.25rem rgba($primary-1, 0.15);
-  }
 
   &:hover .tag {
     background-color: $primary-1;

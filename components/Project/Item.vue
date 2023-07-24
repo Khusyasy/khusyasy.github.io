@@ -1,5 +1,5 @@
 <template>
-  <a class="project" :href="url" target="_blank" rel="noopener noreferrer">
+  <a class="card project" :href="url" target="_blank" rel="noopener noreferrer">
     <div class="image-container">
       <img :src="cover_image" alt="" />
     </div>
@@ -55,7 +55,6 @@ const {
 
 <style lang="scss" scoped>
 .project {
-  background-color: transparent;
   display: flex;
   flex-direction: row;
   gap: 1em;
@@ -68,9 +67,6 @@ const {
   min-height: 7rem;
 
   &:hover {
-    background-color: rgba($black, 0.85);
-    box-shadow: 0 0 0.25rem 0.25rem rgba($primary-1, 0.15);
-
     .image-container {
       border-color: $primary-1;
     }
