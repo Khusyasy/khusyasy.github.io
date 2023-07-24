@@ -86,6 +86,10 @@ const experiences: Experience[] = [
     padding: 4rem 1rem;
     gap: 4rem;
   }
+
+  @include device('tablet') {
+    padding: 8rem calc(2vw + 0.5rem) 8rem calc(30vw + 0.5rem);
+  }
 }
 
 .section {

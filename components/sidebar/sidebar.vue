@@ -33,6 +33,10 @@
     align-items: center;
     padding: 4rem 1rem 1rem;
   }
+
+  @include device('tablet') {
+    padding: 8rem 0 8rem 2vw;
+  }
 }
 
 .top {
