@@ -1,9 +1,9 @@
 <template>
-  <template v-if="projects.length <= 0">
-    <ProjectItemSkeleton v-for="n in [1, 2, 3]" :key="n" />
+  <template v-if="pending || projects.length == 0">
+    <ProjectItemSkeleton v-for=" i  in  [0, 1, 2] " :key="i" />
   </template>
   <template v-else>
-    <ProjectItem v-for="project in projects" :key="project.title" :data="project" />
+    <ProjectItem v-for="( project, i ) in  projects " :key="i" :data="project" />
   </template>
 </template>
 
