@@ -32,7 +32,6 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .main-app {
-  width: 100vw;
   height: max-content;
   color: $white;
   display: flex;
