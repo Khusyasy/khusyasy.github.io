@@ -24,7 +24,12 @@ html {
   background-color: transparent;
 
   &:hover {
-  background-color: rgba($primary-2, 0.05);
+    background-color: rgba($primary-2, 0.05);
     box-shadow: 0 0 0.2em 0.2em rgba($primary-1, 0.15);
+  }
+
+  @include device('mobile') {
+    background-color: rgba($primary-2, 0.05);
+    box-shadow: 0 0 0.2em 0.2em rgba($primary-1, 0.1);
   }
 }

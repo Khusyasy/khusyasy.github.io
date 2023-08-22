@@ -47,6 +47,11 @@ const { date, company, position, info, tags } = props.data
     flex-direction: column;
     gap: 0.5em;
     padding: 0.5rem;
+
+    & .tag {
+      background-color: $primary-1;
+      color: $black;
+    }
   }
 }
 
