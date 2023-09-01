@@ -1,3 +1,6 @@
 # khusyasy.github.io
 
-Currently on progress, no responsive design for mobile yet.
+My personal website, it is what it is.
+
+## Technologies Used
+- Nuxt + Typescript
