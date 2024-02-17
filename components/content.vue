@@ -50,7 +50,7 @@ import type { Experience } from './Exp/types'
 
 const experiences: Experience[] = [
   {
-    date: 'Apr 2022 – Present',
+    date: 'Apr 2022 – Feb 2024',
     position: 'Freelance Fullstack Developer',
     info: 'Developed innovative solutions using Node.js and Puppeteer to scrape data. Successfully collaborated with five clients, providing solutions for their scraping and automation needs.',
     tags: ['JavaScript', 'Typescript', 'Node.js', 'Puppeteer']
