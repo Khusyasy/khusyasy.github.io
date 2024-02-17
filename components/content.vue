@@ -38,6 +38,9 @@
       <div class="section-content">
         <ProjectList />
       </div>
+      <a class="text-highlight link-text" href="https://dev.to/khusyasy" target="_blank" rel="noopener noreferrer">
+        View more on my dev.to
+      </a>
     </div>
     <div class="mobile-social">
       <SidebarSocialList />
@@ -123,6 +126,16 @@ const experiences: Experience[] = [
 
   @include devices('tablet', 'desktop') {
     display: none;
+  }
+}
+
+.link-text {
+  padding: 0.25rem;
+  transition: all 0.2s ease-in-out;
+  color: $primary-2;
+
+  &:hover {
+    color: $primary-1;
   }
 }
 </style>

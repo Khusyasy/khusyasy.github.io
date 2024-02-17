@@ -14,7 +14,7 @@ const { pending, data: res } = useLazyAsyncData('projects', async () => $fetch('
 
 const projects = computed(() => {
   if (pending.value) return ([] as Project[])
-  return (res.value as APIArticle[]).slice(0, 3).map((data: APIArticle) => {
+  return (res.value as APIArticle[]).slice(0, 5).map((data: APIArticle) => {
     return {
       title: data.title,
       description: data.description,
