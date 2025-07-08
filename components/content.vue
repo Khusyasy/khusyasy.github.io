@@ -11,7 +11,7 @@
           I enjoy working with <span class="text-highlight">TypeScript</span> / JavaScript using modern frameworks like <span class="text-highlight">Vue.js</span> and <span class="text-highlight">Nuxt</span> to create responsive and easy to use web apps.
         </p>
         <p>
-          I also like to explore data using <span class="text-highlight">Python</span> and SQL to give actionable insights, especially with Natural Language Processing (<span class="text-highlight">NLP</span>) techniques to solve complex challenges.
+          I also like to explore data using <span class="text-highlight">Python</span> and SQL to give actionable insights, especially with <span class="text-highlight">NLP</span> techniques.
         </p>
 
         <p>
@@ -48,7 +48,7 @@ const experiences: Experience[] = [
     date: 'Jul 2024 – Aug 2024',
     company: 'Telkom Indonesia',
     position: 'Data Analyst Intern',
-    info: 'Developed a prototype customer service chatbot with the Retrieval-Augmented Generation (RAG) method to provide more accurate and context-aware responses, aiming to improve user satisfaction. Designed interactive Tableau dashboards to visualize and analyse data to get insights for action.',
+    info: 'Developed a chatbot with the RAG method to provide accurate and context-aware responses, to improve user satisfaction. Designed interactive dashboards to analyze data and get insights.',
     tags: ['Python', 'NLP', 'Tableau']
   },
   {
