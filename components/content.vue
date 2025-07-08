@@ -4,22 +4,14 @@
       <h2 class="section-title">About</h2>
       <div class="section-content">
         <p>
-          I am a tech enthusiast with a strong passion for website development. With a vocational education in
-          <span class="text-highlight">Software Engineering</span>
-          and currently pursuing a degree in
-          <span class="text-highlight">Informatics</span>,
-          I have established a solid foundation in the
-          field.
+          I love building things to solve real world problems, mainly focusing on
+          <span class="text-highlight">website development</span> and <span class="text-highlight">data science</span>.
         </p>
-
         <p>
-          Specializing in
-          <span class="text-highlight">Frontend Development</span>,
-          I acquired practical experience and developed my
-          expertise using
-          <span class="text-highlight">JavaScript</span>,
-          <span class="text-highlight">Vue.js</span>, and
-          <span class="text-highlight">React.js</span>.
+          I enjoy working with <span class="text-highlight">TypeScript</span> / JavaScript using modern frameworks like <span class="text-highlight">Vue.js</span> and <span class="text-highlight">Nuxt</span> to create responsive and easy to use web apps.
+        </p>
+        <p>
+          I also like to explore data using <span class="text-highlight">Python</span> and SQL to give actionable insights, especially with Natural Language Processing (<span class="text-highlight">NLP</span>) techniques to solve complex challenges.
         </p>
 
         <p>
@@ -34,7 +26,7 @@
       </div>
     </div>
     <div class="section" id="section-project">
-      <h2 class="section-title">Recent Project / Post</h2>
+      <h2 class="section-title">Recent Post / Project</h2>
       <div class="section-content">
         <ProjectList />
       </div>
@@ -53,22 +45,30 @@ import type { Experience } from './Exp/types'
 
 const experiences: Experience[] = [
   {
+    date: 'Jul 2024 – Aug 2024',
+    company: 'Telkom Indonesia',
+    position: 'Data Analyst Intern',
+    info: 'Developed a prototype customer service chatbot with the Retrieval-Augmented Generation (RAG) method to provide more accurate and context-aware responses, aiming to improve user satisfaction. Designed interactive Tableau dashboards to visualize and analyse data to get insights for action.',
+    tags: ['Python', 'NLP', 'Tableau']
+  },
+  {
     date: 'Apr 2022 – Feb 2024',
-    position: 'Freelance Fullstack Developer',
-    info: 'Developed innovative solutions using Node.js and Puppeteer to scrape data. Successfully collaborated with five clients, providing solutions for their scraping and automation needs.',
-    tags: ['JavaScript', 'Typescript', 'Node.js', 'Puppeteer']
+    company: 'Freelance',
+    position: 'Fullstack Developer',
+    info: 'Provided solutions for data scraping automation or website development needs, using Node.js and Puppeteer.',
+    tags: ['JavaScript', 'Typescript', 'Node.js', 'Vue.js', 'Puppeteer']
   },
   {
     date: 'Aug 2021 – Apr 2022',
     company: 'PT. Emtres Indonesia',
     position: 'Frontend Developer',
-    info: 'Building Vue.js website focused on data management and data input. Developed many input forms with validations and unique requirements. Made significant contributions to data encoding and decoding.',
+    info: 'Building Vue.js website focused on data management and data input. Developed complex input forms with validations and unique requirements for climate-related data.',
     tags: ['JavaScript', 'Vue.js']
   },
   {
     date: 'July 2021',
     company: '@loker.programmer',
-    position: 'Frontend Website Developer, Remote Internship',
+    position: 'Frontend Developer Intern',
     info: 'Designed and developed event landing pages and an E-Book sales landing page using React.js. Supported marketing efforts through visually appealing and user-friendly designs.',
     tags: ['JavaScript', 'React.js']
   },
@@ -78,7 +78,7 @@ const experiences: Experience[] = [
 <style lang="scss" scoped>
 .wrapper {
   width: 100%;
-  padding: 8rem calc(min(5vw, 6.25rem) + 2rem) 8rem calc(min(30vw, 37.5rem) + 2rem);
+  padding: 8rem calc(5vw + 2rem) 8rem calc(30vw + 2rem);
   display: flex;
   flex-direction: column;
   gap: 8rem;

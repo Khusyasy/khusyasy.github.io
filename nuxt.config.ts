@@ -8,8 +8,10 @@ export default defineNuxtConfig({
       title: 'Khusyasy',
       meta: [
         {
-          name: 'description', content: 'I am a tech enthusiast with a strong passion for website development. Specializing in Frontend Development, JavaScript, Vue.js, and React.js.',
-        }
+          name: 'description',
+          content:
+            'I love building things to solve real world problems, mainly focusing on website development and data science. I enjoy working with TypeScript, JavaScript, Vue.js, Nuxt, and Python for NLP. I am flexible and open to new opportunities to collaborate with others and create impactful digital solutions.',
+        },
       ],
     },
   },
@@ -19,7 +21,8 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/css/_colors.scss" as *; @use "@/assets/css/_mixins.scss" as *;',
+          additionalData:
+            '@use "@/assets/css/_colors.scss" as *; @use "@/assets/css/_mixins.scss" as *;',
         },
       },
     },

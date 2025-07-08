@@ -1,10 +1,10 @@
 <template>
   <div class="social-list">
     <div class="icons">
-      <SidebarSocialItem icon="github"></SidebarSocialItem>
       <SidebarSocialItem icon="linkedin"></SidebarSocialItem>
+      <SidebarSocialItem icon="github"></SidebarSocialItem>
+      <SidebarSocialItem icon="kaggle"></SidebarSocialItem>
       <SidebarSocialItem icon="devto"></SidebarSocialItem>
-      <SidebarSocialItem icon="twitter"></SidebarSocialItem>
     </div>
     <a class="link" href="mailto:luthfik.job@gmail.com" target="_blank" rel="noopener noreferrer">
       <IconEmail :size="16" /> luthfik.job@gmail.com

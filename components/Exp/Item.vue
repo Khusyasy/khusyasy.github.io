@@ -49,15 +49,16 @@ const { date, company, position, info, tags } = props.data
     padding: 0.5rem;
 
     & .tag {
-      background-color: $primary-1;
-      color: $black;
+      display: none;
+      // background-color: $primary-1;
+      // color: $black;
     }
   }
 }
 
 h3 {
-  font-weight: 400;
-  min-width: 16ch;
+  font-weight: 500;
+  min-width: 18ch;
   opacity: 0.8;
   font-size: 0.8rem;
 }

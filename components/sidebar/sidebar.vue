@@ -18,12 +18,12 @@
   left: max(0px, calc((100vw - 1920px)/2));
   top: 0;
   display: flex;
-  width: min(30vw, 37.5rem);
+  width: 30vw;
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 8rem 0 8rem min(5vw, 6.25rem);
+  padding: 8rem 0 8rem 5vw;
 
   @include device('mobile') {
     position: relative;
@@ -46,7 +46,7 @@
   gap: 2rem;
 
   h1 {
-    font-size: 2.5em;
+    font-size: 2.25em;
 
     @include device('mobile') {
       text-align: center;
