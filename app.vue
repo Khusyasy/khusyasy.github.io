@@ -1,10 +1,7 @@
 <template>
   <div class="main-app">
     <Glow />
-    <div class="container">
-      <Sidebar />
-      <Content />
-    </div>
+    <NuxtPage />
   </div>
 </template>
 
@@ -38,20 +35,5 @@ onMounted(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1920px;
-  height: max-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  z-index: 100;
-
-  @include device('mobile') {
-    flex-direction: column;
-  }
 }
 </style>

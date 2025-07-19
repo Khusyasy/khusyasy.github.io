@@ -9,18 +9,23 @@ import type { NavItemProps } from './types'
 
 const targets = ref<NavItemProps[]>([
   {
-    target: "#section-about",
+    target: "#about",
     text: "About",
     active: false,
   },
   {
-    target: "#section-experience",
-    text: "Experience",
+    target: "#project",
+    text: "Project",
     active: false,
   },
+  // {
+  //   target: "#experience",
+  //   text: "Experience",
+  //   active: false,
+  // },
   {
-    target: "#section-project",
-    text: "Projects",
+    target: "#blog",
+    text: "Blog",
     active: false,
   },
 ])

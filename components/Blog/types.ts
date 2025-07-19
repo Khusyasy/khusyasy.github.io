@@ -37,7 +37,7 @@ export interface APIUser {
   profile_image_90: string;
 }
 
-export interface Project {
+export interface Blog {
   title: string;
   description: string;
   url: string;

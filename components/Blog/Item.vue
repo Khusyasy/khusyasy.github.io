@@ -1,9 +1,9 @@
 <template>
-  <a class="card project" :href="url" target="_blank" rel="noopener noreferrer">
+  <a class="card blog" :href="url" target="_blank" rel="noopener noreferrer">
     <div class="image-container">
       <img :src="cover_image" alt="" />
     </div>
-    <div class="project-content">
+    <div class="blog-content">
       <h3 class="text-highlight">
         {{ title }}
       </h3>
@@ -34,10 +34,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Project } from './types';
+import type { Blog } from './types';
 
 const props = defineProps<{
-  data: Project
+  data: Blog
 }>()
 
 const {
@@ -54,7 +54,7 @@ const {
 </script>
 
 <style lang="scss" scoped>
-.project {
+.blog {
   display: flex;
   flex-direction: row;
   gap: 1em;
@@ -102,7 +102,7 @@ const {
   }
 }
 
-.project-content {
+.blog-content {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
