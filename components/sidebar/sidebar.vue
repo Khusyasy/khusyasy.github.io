@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="sidebar-wrapper">
     <div class="top">
       <h1>Hello, I'm <span class="text-highlight">Khusyasy</span></h1>
       <NavList />
@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
+.sidebar-wrapper {
   position: fixed;
   left: max(0px, calc((100vw - 1920px)/2));
   top: 0;

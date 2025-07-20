@@ -1,13 +1,13 @@
 <template>
   <nav class="nav">
-    <NavItem v-for="target in targets" :target="target.target" :text="target.text" :active="target.active" />
+    <NavItem v-for="target in targetsMain" :target="target.target" :text="target.text" :active="target.active" />
   </nav>
 </template>
 
 <script setup lang="ts">
 import type { NavItemProps } from './types'
 
-const targets = ref<NavItemProps[]>([
+const targetsMain = ref<NavItemProps[]>([
   {
     target: "#about",
     text: "About",
@@ -31,7 +31,7 @@ const targets = ref<NavItemProps[]>([
 ])
 
 onMounted(() => {
-  const targetEls = targets.value.map((target) => {
+  const targetEls = targetsMain.value.map((target) => {
     return document.querySelector(target.target)
   })
   let nearestDiff = Infinity
@@ -53,7 +53,7 @@ onMounted(() => {
         }
       }
     }
-    targets.value.forEach((target, index) => {
+    targetsMain.value.forEach((target, index) => {
       target.active = index === nearestIndex
     })
   }, 10)
@@ -65,8 +65,8 @@ onMounted(() => {
   if (route.hash === "") {
     scrollToTop()
   } else {
-    for (let i = 0; i < targets.value.length; i++) {
-      const target = targets.value[i]
+    for (let i = 0; i < targetsMain.value.length; i++) {
+      const target = targetsMain.value[i]
       if (target.target === route.hash) {
         scrollToQuery(target.target)
         break

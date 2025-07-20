@@ -1,9 +1,9 @@
 <template>
-  <a class="card blog" :href="url" target="_blank" rel="noopener noreferrer">
+  <a class="card project" :href="url" target="_blank" rel="noopener noreferrer">
     <div class="image-container">
       <img :src="cover_image" alt="" />
     </div>
-    <div class="blog-content">
+    <div class="project-content">
       <h3 class="text-highlight">
         {{ title }}
       </h3>
@@ -12,8 +12,7 @@
       </p>
       <div class="footer">
         <div class="info">
-          <div>
-            <!-- TODO: change to custom date display -->
+          <!-- <div>
             {{ readable_publish_date }}
           </div>
           <div>
@@ -23,11 +22,7 @@
           <div>
             <IconComment :size="16" />
             {{ comments_count }}
-          </div>
-        </div>
-        <div class="link">
-          <IconLinkTo :size="16" />
-          dev.to
+          </div> -->
         </div>
       </div>
     </div>
@@ -35,10 +30,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Blog } from './types';
+import type { Project } from './types';
 
 const props = defineProps<{
-  data: Blog
+  data: Project
 }>()
 
 const {
@@ -46,16 +41,12 @@ const {
   description,
   url,
   cover_image,
-  readable_publish_date,
-  tags,
-  comments_count,
-  positive_reactions_count
 } = props.data
 
 </script>
 
 <style lang="scss" scoped>
-.blog {
+.project {
   display: flex;
   flex-direction: row;
   gap: 1em;
@@ -103,7 +94,7 @@ const {
   }
 }
 
-.blog-content {
+.project-content {
   display: flex;
   flex-direction: column;
   gap: 0.5em;

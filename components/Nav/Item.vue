@@ -2,7 +2,7 @@
   <a ref="item" class="navitem" :class="{
     active: active,
     'text-highlight': active,
-  }" :href="target" @click.prevent="() => handleClick(target)">
+  }" :href="'/' + target" @click.prevent="() => handleClick(target)">
     {{ text }}
   </a>
 </template>
@@ -16,7 +16,7 @@ const router = useRouter()
 
 function handleClick(target: string) {
   scrollToQuery(target)
-  router.replace(target)
+  router.replace('/' + target)
 }
 </script>
 

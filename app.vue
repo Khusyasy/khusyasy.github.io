@@ -1,7 +1,15 @@
 <template>
   <div class="main-app">
     <Glow />
-    <NuxtPage />
+    <div class="container">
+      <Sidebar />
+      <div class="main-wrapper">
+        <NuxtPage />
+        <div class="mobile-social">
+          <SidebarSocialList />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -35,5 +43,49 @@ onMounted(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 100;
+
+  @include device('mobile') {
+    flex-direction: column;
+  }
+}
+
+.main-wrapper {
+  width: 100%;
+  padding: 8rem calc(5vw + 2rem) 8rem calc(30vw + 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @include device('mobile') {
+    padding: 4rem 1rem;
+    gap: 4rem;
+  }
+
+  @include device('tablet') {
+    padding: 8rem calc(2vw + 0.5rem) 8rem calc(30vw + 0.5rem);
+  }
+}
+
+.mobile-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+
+  @include devices('tablet', 'desktop') {
+    display: none;
+  }
 }
 </style>
