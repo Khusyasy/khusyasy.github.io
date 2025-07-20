@@ -1,21 +1,23 @@
 <template>
   <nav class="nav">
-    <NavItem v-for="target in targetsMain" :target="target.target" :text="target.text" :active="target.active" />
+    <NavItem v-for="target in targets" :target="target.target" :text="target.text" :active="target.active" />
   </nav>
 </template>
 
 <script setup lang="ts">
 import type { NavItemProps } from './types'
 
+const router = useRouter()
+
 const targetsMain = ref<NavItemProps[]>([
   {
     target: "#about",
-    text: "About",
+    text: "About Me",
     active: false,
   },
   {
-    target: "#project",
-    text: "Project",
+    target: "#projects",
+    text: "Projects",
     active: false,
   },
   // {
@@ -24,14 +26,56 @@ const targetsMain = ref<NavItemProps[]>([
   //   active: false,
   // },
   {
-    target: "#blog",
-    text: "Blog",
+    target: "#blogs",
+    text: "Blogs",
     active: false,
   },
 ])
 
+const targetsProjects = ref<NavItemProps[]>([
+  {
+    target: "#web-dev",
+    text: "Web Dev",
+    active: false,
+  },
+  {
+    target: "#data-ai-llms",
+    text: "Data, AI, and LLMs",
+    active: false,
+  },
+  {
+    target: "#mobile-dev",
+    text: "Mobile Dev",
+    active: false,
+  },
+  {
+    target: "/",
+    text: "Back",
+    active: false,
+  },
+])
+
+const targetsDetails = ref<NavItemProps[]>([
+  {
+    target: "/projects",
+    text: "Back",
+    active: false,
+  },
+])
+
+const targets = computed(() => {
+  if (router.currentRoute.value.path.startsWith('/projects')) {
+    if (router.currentRoute.value.path === '/projects') {
+      return targetsProjects.value
+    }
+    return targetsDetails.value
+  }
+  return targetsMain.value
+})
+
 onMounted(() => {
-  const targetEls = targetsMain.value.map((target) => {
+  const targetEls = targets.value.map((target) => {
+    if (!target.target.startsWith('#')) return null
     return document.querySelector(target.target)
   })
   let nearestDiff = Infinity
@@ -53,7 +97,7 @@ onMounted(() => {
         }
       }
     }
-    targetsMain.value.forEach((target, index) => {
+    targets.value.forEach((target, index) => {
       target.active = index === nearestIndex
     })
   }, 10)
@@ -65,8 +109,8 @@ onMounted(() => {
   if (route.hash === "") {
     scrollToTop()
   } else {
-    for (let i = 0; i < targetsMain.value.length; i++) {
-      const target = targetsMain.value[i]
+    for (let i = 0; i < targets.value.length; i++) {
+      const target = targets.value[i]
       if (target.target === route.hash) {
         scrollToQuery(target.target)
         break

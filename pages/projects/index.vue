@@ -1,14 +1,36 @@
 <template>
-  <div>
-    <h2>
-      Projects and lists
-    </h2>
-    <ProjectList :projects="projects" />
+  <div class="section" id="web-dev">
+    <h2 class="section-title">Website Development</h2>
+    <div class="section-content">
+      <ProjectList :projects="projectsWebDev" />
+    </div>
+  </div>
+  <div class="section" id="data-ai-llms">
+    <h2 class="section-title">Data Analyst, AI, and LLMs</h2>
+    <div class="section-content">
+      <ProjectList :projects="projectsDataAI" />
+    </div>
+  </div>
+  <div class="section" id="mobile-dev">
+    <h2 class="section-title">Mobile Development</h2>
+    <div class="section-content">
+      <ProjectList :projects="projectsMobileDev" />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { Project } from '@/components/Project/types';
+
+useHead({
+  title: 'Khusyasy\'s Projects',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore projects and portfolio showcasing my work and contributions.',
+    },
+  ],
+});
 
 const { data } = await useAsyncData('projects', () => {
   return queryCollection('content').all()
@@ -21,11 +43,17 @@ const projects = computed(() => {
       title: item.title,
       description: item.description,
       url: item.path,
-      cover_image: item.meta['cover_image'] as string || '/images/default-cover.png',
+      cover_image: item.meta.cover_image || '',
+      date: item.meta.date ? new Date(item.meta.date) : new Date(),
+      category: item.meta.category,
     };
     return project;
   })
 })
+
+const projectsWebDev = computed(() => projects.value.filter(p => p.category === 'web-dev'));
+const projectsDataAI = computed(() => projects.value.filter(p => p.category === 'data-ai-llms'));
+const projectsMobileDev = computed(() => projects.value.filter(p => p.category === 'mobile-dev'));
 </script>
 
 <style lang="scss" scoped></style>

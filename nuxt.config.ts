@@ -6,10 +6,10 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content'],
   ssr: true,
   hooks: {
-    'prerender:routes' (ctx) {
-      const blogs = fs.readdirSync('./content')
-      for (const blog of blogs) {
-        const pageName = blog.replace('.md', '')
+    'prerender:routes'(ctx) {
+      const projects = fs.readdirSync('./content')
+      for (const project of projects) {
+        const pageName = project.replace('.md', '')
         ctx.routes.add(`/projects/${pageName}`)
       }
     }

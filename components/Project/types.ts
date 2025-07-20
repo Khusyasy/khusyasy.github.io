@@ -3,4 +3,6 @@ export interface Project {
   description: string;
   url: string;
   cover_image: string;
+  date: Date;
+  category: string;
 }

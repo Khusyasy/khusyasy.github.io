@@ -21,7 +21,7 @@
       </p>
     </div>
   </div>
-  <div class="section" id="project">
+  <div class="section" id="projects">
     <h2 class="section-title">Recent Project</h2>
     <div class="section-content">
       <ProjectList :projects="projects" />
@@ -30,7 +30,7 @@
       See all projects
     </a>
   </div>
-  <div class="section" id="blog">
+  <div class="section" id="blogs">
     <h2 class="section-title">Recent Blog Post</h2>
     <div class="section-content">
       <BlogList />
@@ -40,16 +40,17 @@
     </a>
   </div>
   <!-- <div class="section" id="experience">
-      <h2 class="section-title">Experience</h2>
-      <div class="section-content">
-        <ExpItem v-for="exp in experiences" :data="exp" />
-      </div>
-    </div> -->
+    <h2 class="section-title">Experience</h2>
+    <div class="section-content">
+      <ExpItem v-for="exp in experiences" :data="exp" />
+    </div>
+  </div> -->
 </template>
 
 <script setup lang="ts">
 import type { Experience } from '@/components/Exp/types'
-import type { Project } from '@/components/Project/types';
+import type { Project } from '@/components/Project/types'
+
 
 const { data } = await useAsyncData('projects', () => {
   return queryCollection('content').all()
@@ -57,12 +58,14 @@ const { data } = await useAsyncData('projects', () => {
 
 const projects = computed(() => {
   if (!data.value) return [];
-  return data.value.slice(0, 3).map((item) => {
+  return data.value.map((item) => {
     const project: Project = {
       title: item.title,
       description: item.description,
       url: item.path,
-      cover_image: item.meta['cover_image'] as string || '/images/default-cover.png',
+      cover_image: item.meta.cover_image || '',
+      date: item.meta.date ? new Date(item.meta.date) : new Date(),
+      category: item.meta.category,
     };
     return project;
   })
@@ -100,28 +103,4 @@ const experiences: Experience[] = [
 ]
 </script>
 
-<style lang="scss" scoped>
-.section {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.section-title {
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.section-content {
-  font-size: 1.25rem;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-</style>
+<style lang="scss" scoped></style>

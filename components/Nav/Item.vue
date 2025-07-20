@@ -2,7 +2,7 @@
   <a ref="item" class="navitem" :class="{
     active: active,
     'text-highlight': active,
-  }" :href="'/' + target" @click.prevent="() => handleClick(target)">
+  }" :href="target" @click.prevent="handleClick(target)">
     {{ text }}
   </a>
 </template>
@@ -15,14 +15,18 @@ defineProps<NavItemProps>()
 const router = useRouter()
 
 function handleClick(target: string) {
-  scrollToQuery(target)
-  router.replace('/' + target)
+  if (target.startsWith('#')) {
+    scrollToQuery(target)
+    router.replace(target)
+  } else {
+    router.push(target)
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .navitem {
-  width: min-content;
+  width: fit-content;
   font-size: 2em;
   line-height: 1;
   color: $white;

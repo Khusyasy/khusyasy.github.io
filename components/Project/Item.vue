@@ -1,5 +1,5 @@
 <template>
-  <a class="card project" :href="url" target="_blank" rel="noopener noreferrer">
+  <a class="card project" :href="url">
     <div class="image-container">
       <img :src="cover_image" alt="" />
     </div>
@@ -12,17 +12,9 @@
       </p>
       <div class="footer">
         <div class="info">
-          <!-- <div>
-            {{ readable_publish_date }}
-          </div>
           <div>
-            <IconLove :size="16" />
-            {{ positive_reactions_count }}
+            {{ formatDate(date) }}
           </div>
-          <div>
-            <IconComment :size="16" />
-            {{ comments_count }}
-          </div> -->
         </div>
       </div>
     </div>
@@ -41,6 +33,7 @@ const {
   description,
   url,
   cover_image,
+  date,
 } = props.data
 
 </script>

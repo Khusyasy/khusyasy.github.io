@@ -13,8 +13,7 @@
       <div class="footer">
         <div class="info">
           <div>
-            <!-- TODO: change to custom date display -->
-            {{ readable_publish_date }}
+            {{ formatDate(published_timestamp) }}
           </div>
           <div>
             <IconLove :size="16" />
@@ -46,7 +45,7 @@ const {
   description,
   url,
   cover_image,
-  readable_publish_date,
+  published_timestamp,
   tags,
   comments_count,
   positive_reactions_count

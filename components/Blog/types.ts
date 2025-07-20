@@ -42,7 +42,7 @@ export interface Blog {
   description: string;
   url: string;
   cover_image: string;
-  readable_publish_date: string;
+  published_timestamp: string;
   tags: string[];
   comments_count: number;
   positive_reactions_count: number;
