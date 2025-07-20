@@ -8,15 +8,17 @@ export function rem(v: number) {
 
 export function scrollToQuery(querySelector: string) {
   const element = document.querySelector(querySelector);
-  const headerOffset = rem(8);
+  const headerMargin = rem(8);
   const currScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
   if (element) {
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + currScroll - headerOffset;
+    const elTop = element.getBoundingClientRect().top;
+    // TODO: fix scroll to header margin
+    const offsetPosition = elTop - headerMargin + currScroll;
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth",
     });
+    console.log(elTop, offsetPosition, headerMargin)
   }
 }
 

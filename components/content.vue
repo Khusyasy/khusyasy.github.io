@@ -27,7 +27,7 @@
       <div class="section-content">
         <BlogList />
       </div>
-      <a class="text-highlight link-text" href="/projects" target="_self">
+      <a href="/projects" target="_self">
         See all projects
       </a>
     </div>
@@ -36,8 +36,8 @@
       <div class="section-content">
         <BlogList />
       </div>
-      <a class="text-highlight link-text" href="https://dev.to/khusyasy" target="_blank" rel="noopener noreferrer">
-        View more on my dev.to
+      <a href="https://dev.to/khusyasy" target="_blank" rel="noopener noreferrer">
+        Read more posts on dev.to
       </a>
     </div>
     <!-- <div class="section" id="experience">
@@ -138,16 +138,6 @@ const experiences: Experience[] = [
 
   @include devices('tablet', 'desktop') {
     display: none;
-  }
-}
-
-.link-text {
-  padding: 0.25rem;
-  transition: all 0.2s ease-in-out;
-  color: $primary-2;
-
-  &:hover {
-    color: $primary-1;
   }
 }
 </style>

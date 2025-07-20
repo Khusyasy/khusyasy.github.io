@@ -1,6 +1,5 @@
 <template>
-  <a ref="item" :class="{
-    navitem: true,
+  <a ref="item" class="navitem" :class="{
     active: active,
     'text-highlight': active,
   }" :href="target" @click.prevent="() => handleClick(target)">
