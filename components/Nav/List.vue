@@ -73,39 +73,39 @@ const targets = computed(() => {
   return targetsMain.value
 })
 
-onMounted(() => {
+function handleSetActive() {
   const targetEls = targets.value.map((target) => {
     if (!target.target.startsWith('#')) return null
     return document.querySelector(target.target)
   })
   let nearestDiff = Infinity
   let nearestIndex = 0
-  setInterval(() => {
-    for (let i = 0; i < targetEls.length; i++) {
-      const targetEl = targetEls[i]
-      if (targetEl) {
-        const bound = targetEl.getBoundingClientRect()
-        if (bound.top < window.innerHeight / 2 && bound.bottom > window.innerHeight / 2) {
+  for (let i = 0; i < targetEls.length; i++) {
+    const targetEl = targetEls[i]
+    if (targetEl) {
+      const bound = targetEl.getBoundingClientRect()
+      if (bound.top < window.innerHeight / 2 && bound.bottom > window.innerHeight / 2) {
+        nearestIndex = i
+        break
+      } else {
+        const diff = Math.min(Math.abs(bound.top - window.innerHeight / 2), Math.abs(bound.bottom - window.innerHeight / 2))
+        if (diff < nearestDiff) {
+          nearestDiff = diff
           nearestIndex = i
-          break
-        } else {
-          const diff = Math.min(Math.abs(bound.top - window.innerHeight / 2), Math.abs(bound.bottom - window.innerHeight / 2))
-          if (diff < nearestDiff) {
-            nearestDiff = diff
-            nearestIndex = i
-          }
         }
       }
     }
-    targets.value.forEach((target, index) => {
-      target.active = index === nearestIndex
-    })
-  }, 10)
-})
+  }
+  targets.value.forEach((target, index) => {
+    target.active = index === nearestIndex
+  })
+}
 
 const route = useRoute()
 
 onMounted(() => {
+  setInterval(handleSetActive, 10)
+
   if (route.hash === "") {
     scrollToTop()
   } else {
