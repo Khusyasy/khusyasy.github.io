@@ -55,6 +55,7 @@ const targetsProjects = ref<NavItemProps[]>([
   },
 ])
 
+// TODO: dynamic nav list di project details, based on headings
 const targetsDetails = ref<NavItemProps[]>([
   {
     target: "/projects",
