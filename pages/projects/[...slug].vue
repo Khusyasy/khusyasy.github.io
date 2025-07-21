@@ -1,5 +1,4 @@
 <template>
-  <!-- TODO: show breadcrumbs / navigation, jangan di sidebar ig -->
   <!-- TODO: show cover image -->
   <ContentRenderer v-if="page" :value="page" class="content-renderer" />
   <div v-else class="not-found">

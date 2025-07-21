@@ -48,21 +48,10 @@ const targetsProjects = ref<NavItemProps[]>([
     text: "Mobile Dev",
     active: false,
   },
-  {
-    target: "/",
-    text: "Back",
-    active: false,
-  },
 ])
 
 // TODO: dynamic nav list di project details, based on headings
-const targetsDetails = ref<NavItemProps[]>([
-  {
-    target: "/projects",
-    text: "Back",
-    active: false,
-  },
-])
+const targetsDetails = ref<NavItemProps[]>([])
 
 const targets = computed(() => {
   if (router.currentRoute.value.path.startsWith('/projects')) {

@@ -4,7 +4,10 @@
     <div class="container">
       <Sidebar />
       <div class="main-wrapper">
-        <NuxtPage />
+        <Breadcrumbs />
+        <div class="content-wrapper">
+          <NuxtPage />
+        </div>
         <div class="mobile-social">
           <SidebarSocialList />
         </div>
@@ -63,17 +66,23 @@ onMounted(() => {
 .main-wrapper {
   width: 100%;
   padding: 8rem calc(5vw + 2rem) 8rem calc(30vw + 2rem);
+
+  @include device('mobile') {
+    padding: 4rem 1rem;
+  }
+
+  @include device('tablet') {
+    padding: 8rem calc(2vw + 0.5rem) 8rem calc(30vw + 0.5rem);
+  }
+}
+
+.content-wrapper {
   display: flex;
   flex-direction: column;
   gap: 8rem;
 
   @include device('mobile') {
-    padding: 4rem 1rem;
     gap: 4rem;
-  }
-
-  @include device('tablet') {
-    padding: 8rem calc(2vw + 0.5rem) 8rem calc(30vw + 0.5rem);
   }
 }
 

@@ -1,5 +1,4 @@
 <template>
-  <!-- TODO: show breadcrumbs / navigation, jangan di sidebar ig -->
   <div class="section" id="web-dev">
     <h2 class="section-title">Website Development</h2>
     <div class="section-content">
