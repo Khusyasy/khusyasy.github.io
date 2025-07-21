@@ -84,6 +84,7 @@ const {
 }
 
 .image-container {
+  flex: 1;
   overflow: hidden;
   border-radius: 0.5rem;
   width: 50%;
@@ -103,6 +104,7 @@ const {
 }
 
 .blog-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5em;

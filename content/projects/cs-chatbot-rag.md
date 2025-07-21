@@ -1,6 +1,6 @@
 ---
 title: Developing a Prototype Customer Service Chatbot with LLM-RAG
-description: Project to develop a WhatsApp chatbot using LLM and RAG for PT Telkom Indonesia, using a custom knowledge base to improve customer service efficiency.
+description: Custom chatbot using LLM and RAG with a custom knowledge base to improve customer service efficiency.
 date: 2024-09-20
 category: data-ai-llms
 cover_image: /images/projects/cs-chatbot-rag/chatbot-result.png
