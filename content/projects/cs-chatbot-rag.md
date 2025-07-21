@@ -1,6 +1,6 @@
 ---
 title: Developing a Prototype Customer Service Chatbot with LLM-RAG
-description: This is the first page of my project.
+description: Project to develop a WhatsApp chatbot using LLM and RAG for PT Telkom Indonesia, using a custom knowledge base to improve customer service efficiency.
 date: 2024-09-20
 category: data-ai-llms
 cover_image: /images/projects/cs-chatbot-rag/chatbot-result.png
@@ -59,6 +59,11 @@ The system architecture consists of several components, including:
 2. Splitting, data is split based on headers and text similarities.
 3. Embedding model: "naufalihsan/indonesian-sbert-large".
 4. ChromaDB is used for semantic similarity-based data search.
+
+
+### Chatbot System
+
+![Chatbot System Flowchart](/images/projects/cs-chatbot-rag/chatbot-system.png)
 
 ## Results
 
