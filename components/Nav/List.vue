@@ -58,7 +58,7 @@ const targetsProjects = ref<NavItemProps[]>([
   },
   {
     target: "#data-ai-llms",
-    text: "Data Analyst, AI, LLMs",
+    text: "Data, AI, LLMs",
     active: false,
     level: 2,
   },

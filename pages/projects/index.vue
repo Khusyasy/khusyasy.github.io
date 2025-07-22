@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="section" id="data-ai-llms">
-      <h2 class="section-title">Data Analyst, AI, and LLMs</h2>
+      <h2 class="section-title">Data, AI, and LLMs</h2>
       <div class="section-content">
         <ProjectList :projects="projectsDataAI" />
       </div>
