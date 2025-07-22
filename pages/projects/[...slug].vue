@@ -102,4 +102,15 @@ const { data: page } = await useAsyncData(route.path, () => {
   border-radius: 0.2rem;
   padding: 0.25rem 0.5rem;
 }
+
+.content-renderer code {
+  background-color: $black;
+  padding: 0.15rem 0.25rem;
+  border-radius: 0.25rem;
+  font-variation-settings:
+    "MONO" 1,
+    "CASL" 0,
+    "slnt" 0,
+    "CRSV" 0;
+}
 </style>
