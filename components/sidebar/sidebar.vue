@@ -1,9 +1,7 @@
 <template>
   <div class="sidebar-wrapper">
-    <div class="top">
-      <h1>Hello, I'm <span class="text-highlight">Khusyasy</span></h1>
-      <NavList />
-    </div>
+    <h1 class="top-text">Hello, I'm <span class="text-highlight">Khusyasy</span></h1>
+    <NavList />
     <SidebarSocialList />
   </div>
 </template>
@@ -39,18 +37,11 @@
   }
 }
 
-.top {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
+.top-text {
+  font-size: 2.25em;
 
-  h1 {
-    font-size: 2.25em;
-
-    @include device('mobile') {
-      text-align: center;
-    }
+  @include device('mobile') {
+    text-align: center;
   }
 }
 </style>

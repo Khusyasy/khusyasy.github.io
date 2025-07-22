@@ -3,6 +3,9 @@
     <NuxtImg v-if="page?.meta?.cover_image" :src="page.meta.cover_image" class="cover-image" width="100%" height="auto"
       :alt="page.title" />
   </div>
+  <span class="text-highlight">
+    {{ page?.meta?.date ? formatDate(page.meta.date) : '' }}
+  </span>
   <div class="content-wrapper">
     <ContentRenderer v-if="page" :value="page" class="content-renderer" />
     <div v-else class="not-found">
@@ -47,14 +50,15 @@ const { data: page } = await useAsyncData(route.path, () => {
   aspect-ratio: 16 / 9;
   margin: 1rem 0;
   max-width: 80ch;
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
   border: 2px solid $primary-2;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .cover-image {
-  width: 100%;
+  min-width: 100%;
+  max-width: unset !important;
 }
 
 .not-found {

@@ -29,13 +29,13 @@ Finally, I deployed both landing pages on Netlify, making them accessible to use
 ## Results
 The landing pages were successfully launched and received positive feedback from both the team and users. The event and e-book have increased user engagement, with around 26.32% more users registered for the event and downloaded the e-book compared to previous campaigns.
 
-#### <https://lokpro-event.netlify.app/>
+> <https://lokpro-event.netlify.app/>
 
 ![Event Landing Page 1](/images/projects/lokpro-landing-page/event-landing-page.png)
 
 ![Event Landing Page 2](/images/projects/lokpro-landing-page/event-landing-page-2.png)
 
-#### <https://lokpro-ebook.netlify.app/>
+> <https://lokpro-ebook.netlify.app/>
 
 ![E-book Landing Page 1](/images/projects/lokpro-landing-page/ebook-landing-page.png)
 

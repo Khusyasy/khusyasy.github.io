@@ -51,14 +51,14 @@ html {
 }
 
 a {
-  padding: 0.25rem;
+  // padding: 0.25rem;
   transition: all 0.2s ease-in-out;
   color: $primary-2;
   text-shadow: 0 0 1.5em rgba($primary-2, 0.5);
 
   &:hover {
     color: $primary-1;
-  text-shadow: 0 0 1.5em rgba($primary-1, 0.5);
+    text-shadow: 0 0 1.5em rgba($primary-1, 0.5);
   }
 }
 
