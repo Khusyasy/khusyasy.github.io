@@ -1,5 +1,5 @@
 <template>
-  <a v-if="!isMainPage" :href="hrefBack" @click.prevent="router.back()" class="back">
+  <a v-if="!isMainPage" :href="hrefBack" class="back">
     &lt; Back
   </a>
   <nav class="nav">
@@ -12,7 +12,6 @@
 import type { NavItemProps } from './types'
 
 const route = useRoute()
-const router = useRouter()
 
 const hrefBack = computed(() => {
   const segments = route.path.split('/')
