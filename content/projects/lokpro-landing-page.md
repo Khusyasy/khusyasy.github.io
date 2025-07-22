@@ -1,12 +1,12 @@
 ---
-title: Event and E-book Landing Page using React.js
-description: Designed and developed a landing page to enhance user engagement for @loker.programmer event and e-book.
 date: 2021-07-20
 category: web-dev
 cover_image: /images/projects/lokpro-landing-page/event-landing-page.png
 ---
 
 # Event and E-book Landing Page using React.js
+
+Designed and developed a landing page to enhance user engagement for @loker.programmer event and e-book.
 
 ## Overview
 

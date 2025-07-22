@@ -71,7 +71,7 @@ const targetsProjects = ref<NavItemProps[]>([
   },
 ])
 
-const { data: page } = useProject(route.path)
+const { data: page } = await useProject(route.path)
 
 const targetsDynamic = computed(() => {
   if (!page.value?.body?.toc?.links) {

@@ -54,11 +54,11 @@ import type { Experience } from '@/components/Exp/types'
 import type { Project } from '@/components/Project/types'
 
 
-const { data } = useProjects()
+const { data } = await useProjects()
 
 const projects = computed(() => {
   if (!data.value) return [];
-  return data.value.map((item) => {
+  return data.value.slice(0, 3).map((item) => {
     const project: Project = {
       title: item.title,
       description: item.description,

@@ -1,17 +1,15 @@
 <template>
-  <div class="cover-container">
-    <NuxtImg v-if="page?.meta?.cover_image" :src="page.meta.cover_image" class="cover-image" width="100%" height="auto"
-      :alt="page.title" />
+  <div class="cover-container" v-if="page?.meta?.cover_image">
+    <NuxtImg :src="page.meta.cover_image" class="cover-image" width="100%" height="auto" :alt="page.title" />
   </div>
-  <span class="text-highlight">
+  <span class="text-highlight" v-if="page?.title">
     {{ page?.meta?.date ? formatDate(page.meta.date) : '' }}
   </span>
   <div class="content-wrapper">
-    <ContentRenderer v-if="page" :value="page" class="content-renderer" />
+    <ContentRenderer v-if="page?.title" :value="page" class="content-renderer" />
     <div v-else class="not-found">
       <h2>
-        Page not found
-        {{ route.path }}
+        Project not found {{ route.path }}
       </h2>
       <a class="text-highlight" href="/">Go back to home</a>
     </div>
@@ -21,7 +19,13 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: page } = useProject(route.path)
+const { data: page } = await useProject(route.path)
+
+useSeoMeta({
+  title: page?.value?.title || 'Project Not Found',
+  description: page?.value?.meta?.description || 'Details about the project are not available.',
+  ogImage: page?.value?.meta?.cover_image || null,
+})
 </script>
 
 <style lang="scss" scoped>

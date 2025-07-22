@@ -24,17 +24,12 @@
 <script setup lang="ts">
 import type { Project } from '@/components/Project/types';
 
-useHead({
+useSeoMeta({
   title: 'Khusyasy\'s Projects',
-  meta: [
-    {
-      name: 'description',
-      content: 'Explore projects and portfolio showcasing my work and contributions.',
-    },
-  ],
-});
+  description: 'Explore projects and portfolio showcasing my work and contributions.',
+})
 
-const { data } = useProjects()
+const { data } = await useProjects()
 
 const projects = computed(() => {
   if (!data.value) return [];

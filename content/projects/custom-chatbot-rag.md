@@ -1,12 +1,12 @@
 ---
-title: Prototype Customer Service Chatbot with LLM-RAG
-description: Developed a chatbot using LLM and RAG with a custom knowledge base to improve customer service efficiency at Telkom.
 date: 2024-09-20
 category: data-ai-llms
 cover_image: /images/projects/custom-chatbot-rag/chatbot-result.png
 ---
 
 # Prototype Customer Service Chatbot with LLM-RAG
+
+Developed a chatbot using LLM and RAG with a custom knowledge base to improve customer service efficiency at Telkom.
 
 ## Introduction
 

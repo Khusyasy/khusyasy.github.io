@@ -1,1 +1,7 @@
-export const useProject = (path: string) => useAsyncData(path, () => queryCollection('content').path(path).first())
+export const useProject = async (path: string) => await useAsyncData(path, async () => {
+  const data = await queryCollection('content').path(path).first()
+  if (!data) {
+    return {} as any
+  }
+  return data
+})
