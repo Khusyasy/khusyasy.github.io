@@ -9,6 +9,7 @@
 </template>
 
 <script setup lang="ts">
+import type { TocLink } from '@nuxt/content'
 import type { NavItemProps } from './types'
 
 const route = useRoute()
@@ -70,31 +71,34 @@ const targetsProjects = ref<NavItemProps[]>([
   },
 ])
 
-const targetsDynamic = ref<NavItemProps[]>([])
+const { data: page } = useProject(route.path)
 
-const TAGS2LEVELS = {
-  'H2': 2 as const,
-  'H3': 3 as const,
-  'H4': 4 as const,
-}
-
-onMounted(() => {
-  if (route.path.startsWith('/projects/')) {
-    const headings = document.querySelectorAll('h2, h3, h4')
-    targetsDynamic.value = []
-
-    Array.from(headings).forEach((heading) => {
-      if (heading.tagName !== 'H2' && heading.tagName !== 'H3' && heading.tagName !== 'H4') {
-        return
-      }
-      targetsDynamic.value.push({
-        target: `#${heading.id}`,
-        text: heading.textContent || '',
-        active: false,
-        level: TAGS2LEVELS[heading.tagName],
-      })
+const targetsDynamic = computed(() => {
+  if (!page.value?.body?.toc?.links) {
+    return []
+  }
+  const targets = ref<NavItemProps[]>([])
+  const processLink = (link: TocLink) => {
+    if (link.depth !== 1 && link.depth !== 2 && link.depth !== 3 && link.depth !== 4) {
+      return null
+    }
+    targets.value.push({
+      target: '#' + link.id,
+      text: link.text,
+      active: false,
+      level: link.depth,
     })
   }
+  const traverseLinks = (links: TocLink[]) => {
+    links.forEach((link) => {
+      processLink(link)
+      if (link.children) {
+        traverseLinks(link.children)
+      }
+    })
+  }
+  traverseLinks(page.value.body.toc.links)
+  return targets.value
 })
 
 const targets = computed(() => {

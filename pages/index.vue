@@ -54,9 +54,7 @@ import type { Experience } from '@/components/Exp/types'
 import type { Project } from '@/components/Project/types'
 
 
-const { data } = await useAsyncData('projects', () => {
-  return queryCollection('content').all()
-})
+const { data } = useProjects()
 
 const projects = computed(() => {
   if (!data.value) return [];

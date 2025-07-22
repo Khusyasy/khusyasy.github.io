@@ -21,14 +21,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-// /projects/<slugs>
-// const pathName = computed(() => {
-//   return route.path === '/projects' ? '/' : route.path.replace('/projects', '')
-// })
-
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
-})
+const { data: page } = useProject(route.path)
 </script>
 
 <style lang="scss" scoped>

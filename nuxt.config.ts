@@ -48,5 +48,13 @@ export default defineNuxtConfig({
     renderer: {
       anchorLinks: false,
     },
+    build: {
+      markdown: {
+        toc: {
+          depth: 4,
+          searchDepth: 4,
+        },
+      },
+    },
   },
 });

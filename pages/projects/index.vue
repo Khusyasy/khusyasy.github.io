@@ -34,9 +34,7 @@ useHead({
   ],
 });
 
-const { data } = await useAsyncData('projects', () => {
-  return queryCollection('content').all()
-})
+const { data } = useProjects()
 
 const projects = computed(() => {
   if (!data.value) return [];
