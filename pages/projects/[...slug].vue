@@ -49,6 +49,13 @@ const { data: page } = await useAsyncData(route.path, () => {
   max-height: 75vh;
 }
 
+.content-renderer blockquote {
+  background-color: $black;
+  border-left: 0.2rem solid $primary-1;
+  border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
+}
+
 .not-found {
   display: flex;
   flex-direction: column;
