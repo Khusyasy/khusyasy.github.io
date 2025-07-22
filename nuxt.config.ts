@@ -44,4 +44,9 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
+  content: {
+    renderer: {
+      anchorLinks: false,
+    },
+  },
 });

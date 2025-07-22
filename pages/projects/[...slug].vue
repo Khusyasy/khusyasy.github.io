@@ -57,7 +57,8 @@ const { data: page } = await useAsyncData(route.path, () => {
 }
 
 .cover-image {
-  min-width: 100%;
+  width: 100%;
+  height: auto;
   max-width: unset !important;
 }
 
