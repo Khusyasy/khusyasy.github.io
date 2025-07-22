@@ -3,7 +3,7 @@ import fs from 'fs'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-19',
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@nuxt/image'],
   ssr: true,
   hooks: {
     'prerender:routes'(ctx) {

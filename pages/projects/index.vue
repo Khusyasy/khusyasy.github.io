@@ -1,20 +1,22 @@
 <template>
-  <div class="section" id="web-dev">
-    <h2 class="section-title">Website Development</h2>
-    <div class="section-content">
-      <ProjectList :projects="projectsWebDev" />
+  <div class="content-wrapper">
+    <div class="section" id="web-dev">
+      <h2 class="section-title">Website Development</h2>
+      <div class="section-content">
+        <ProjectList :projects="projectsWebDev" />
+      </div>
     </div>
-  </div>
-  <div class="section" id="data-ai-llms">
-    <h2 class="section-title">Data Analyst, AI, and LLMs</h2>
-    <div class="section-content">
-      <ProjectList :projects="projectsDataAI" />
+    <div class="section" id="data-ai-llms">
+      <h2 class="section-title">Data Analyst, AI, and LLMs</h2>
+      <div class="section-content">
+        <ProjectList :projects="projectsDataAI" />
+      </div>
     </div>
-  </div>
-  <div class="section" id="mobile-dev">
-    <h2 class="section-title">Mobile Development</h2>
-    <div class="section-content">
-      <ProjectList :projects="projectsMobileDev" />
+    <div class="section" id="mobile-dev">
+      <h2 class="section-title">Mobile Development</h2>
+      <div class="section-content">
+        <ProjectList :projects="projectsMobileDev" />
+      </div>
     </div>
   </div>
 </template>
@@ -56,4 +58,14 @@ const projectsDataAI = computed(() => projects.value.filter(p => p.category === 
 const projectsMobileDev = computed(() => projects.value.filter(p => p.category === 'mobile-dev'));
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include device('mobile') {
+    gap: 2rem;
+  }
+}
+</style>

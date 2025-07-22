@@ -6,7 +6,7 @@ category: web-dev
 cover_image: /images/projects/lokpro-landing-page/event-landing-page.png
 ---
 
-# Event and E-book Landing Page using React.jsnpm
+# Event and E-book Landing Page using React.js
 
 ## Overview
 

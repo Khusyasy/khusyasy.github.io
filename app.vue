@@ -5,9 +5,7 @@
       <Sidebar />
       <div class="main-wrapper">
         <Breadcrumbs />
-        <div class="content-wrapper">
-          <NuxtPage />
-        </div>
+        <NuxtPage />
         <div class="mobile-social">
           <SidebarSocialList />
         </div>
@@ -73,16 +71,6 @@ onMounted(() => {
 
   @include device('tablet') {
     padding: 8rem calc(2vw + 0.5rem) 8rem calc(30vw + 0.5rem);
-  }
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-
-  @include device('mobile') {
-    gap: 4rem;
   }
 }
 

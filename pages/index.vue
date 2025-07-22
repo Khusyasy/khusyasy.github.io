@@ -1,50 +1,52 @@
 <template>
-  <div class="section" id="about">
-    <h2 class="section-title">About</h2>
-    <div class="section-content">
-      <p>
-        I love building things to solve real world problems, mainly focusing on
-        <span class="text-highlight">website development</span> and <span class="text-highlight">data science</span>.
-      </p>
-      <p>
-        I enjoy working with <span class="text-highlight">TypeScript</span> / JavaScript using modern frameworks like
-        <span class="text-highlight">Vue.js</span> and <span class="text-highlight">Nuxt</span> to create responsive
-        and easy to use web apps.
-      </p>
-      <p>
-        I also like to explore data using <span class="text-highlight">Python</span> and SQL to give actionable
-        insights, especially with <span class="text-highlight">NLP</span> techniques.
-      </p>
+  <div class="content-wrapper">
+    <div class="section" id="about">
+      <h2 class="section-title">About</h2>
+      <div class="section-content">
+        <p>
+          I love building things to solve real world problems, mainly focusing on
+          <span class="text-highlight">website development</span> and <span class="text-highlight">data science</span>.
+        </p>
+        <p>
+          I enjoy working with <span class="text-highlight">TypeScript</span> / JavaScript using modern frameworks like
+          <span class="text-highlight">Vue.js</span> and <span class="text-highlight">Nuxt</span> to create responsive
+          and easy to use web apps.
+        </p>
+        <p>
+          I also like to explore data using <span class="text-highlight">Python</span> and SQL to give actionable
+          insights, especially with <span class="text-highlight">NLP</span> techniques.
+        </p>
 
-      <p>
-        I am flexible and open to new opportunities to collaborate with others and create impactful digital solutions.
-      </p>
+        <p>
+          I am flexible and open to new opportunities to collaborate with others and create impactful digital solutions.
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="section" id="projects">
-    <h2 class="section-title">Recent Project</h2>
-    <div class="section-content">
-      <ProjectList :projects="projects" />
+    <div class="section" id="projects">
+      <h2 class="section-title">Recent Project</h2>
+      <div class="section-content">
+        <ProjectList :projects="projects" />
+      </div>
+      <a href="/projects" target="_self">
+        See all projects
+      </a>
     </div>
-    <a href="/projects" target="_self">
-      See all projects
-    </a>
-  </div>
-  <div class="section" id="blogs">
-    <h2 class="section-title">Recent Blog Post</h2>
-    <div class="section-content">
-      <BlogList />
+    <div class="section" id="blogs">
+      <h2 class="section-title">Recent Blog Post</h2>
+      <div class="section-content">
+        <BlogList />
+      </div>
+      <a href="https://dev.to/khusyasy" target="_blank" rel="noopener noreferrer">
+        Read more posts on dev.to
+      </a>
     </div>
-    <a href="https://dev.to/khusyasy" target="_blank" rel="noopener noreferrer">
-      Read more posts on dev.to
-    </a>
-  </div>
-  <!-- <div class="section" id="experience">
+    <!-- <div class="section" id="experience">
     <h2 class="section-title">Experience</h2>
     <div class="section-content">
       <ExpItem v-for="exp in experiences" :data="exp" />
     </div>
   </div> -->
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -103,4 +105,14 @@ const experiences: Experience[] = [
 ]
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @include device('mobile') {
+    gap: 4rem;
+  }
+}
+</style>

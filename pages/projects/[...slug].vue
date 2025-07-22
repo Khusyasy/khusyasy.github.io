@@ -1,12 +1,17 @@
 <template>
-  <!-- TODO: show cover image -->
-  <ContentRenderer v-if="page" :value="page" class="content-renderer" />
-  <div v-else class="not-found">
-    <h2>
-      Page not found
-      {{ route.path }}
-    </h2>
-    <a class="text-highlight" href="/">Go back to home</a>
+  <div class="cover-container">
+    <NuxtImg v-if="page?.meta?.cover_image" :src="page.meta.cover_image" class="cover-image" width="100%" height="auto"
+      :alt="page.title" />
+  </div>
+  <div class="content-wrapper">
+    <ContentRenderer v-if="page" :value="page" class="content-renderer" />
+    <div v-else class="not-found">
+      <h2>
+        Page not found
+        {{ route.path }}
+      </h2>
+      <a class="text-highlight" href="/">Go back to home</a>
+    </div>
   </div>
 </template>
 
@@ -22,6 +27,44 @@ const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 </script>
+
+<style lang="scss" scoped>
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include device('mobile') {
+    gap: 2rem;
+  }
+}
+
+.cover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 1rem 0;
+  max-width: 80ch;
+  object-fit: cover;
+  overflow: hidden;
+  border: 2px solid $primary-2;
+  border-radius: 10px;
+}
+
+.cover-image {
+  width: 100%;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 16rem);
+}
+</style>
 
 <style lang="scss">
 .content-renderer {
@@ -54,13 +97,5 @@ const { data: page } = await useAsyncData(route.path, () => {
   border-left: 0.2rem solid $primary-1;
   border-radius: 0.2rem;
   padding: 0.25rem 0.5rem;
-}
-
-.not-found {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - 16rem);
 }
 </style>
