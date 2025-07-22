@@ -35,10 +35,10 @@ const { data: page } = await useAsyncData(route.path, () => {
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 6rem;
 
   @include device('mobile') {
-    gap: 2rem;
+    gap: 3rem;
   }
 }
 

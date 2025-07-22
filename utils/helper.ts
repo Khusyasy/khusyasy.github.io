@@ -12,13 +12,11 @@ export function scrollToQuery(querySelector: string) {
   const currScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
   if (element) {
     const elTop = element.getBoundingClientRect().top;
-    // TODO: fix scroll to header margin
-    const offsetPosition = elTop - headerMargin + currScroll;
+    const offsetPosition = currScroll + elTop - headerMargin;
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth",
     });
-    console.log(elTop, offsetPosition, headerMargin)
   }
 }
 

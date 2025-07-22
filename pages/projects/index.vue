@@ -62,10 +62,10 @@ const projectsMobileDev = computed(() => projects.value.filter(p => p.category =
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 8rem;
 
   @include device('mobile') {
-    gap: 2rem;
+    gap: 4rem;
   }
 }
 </style>

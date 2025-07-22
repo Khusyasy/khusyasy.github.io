@@ -20,8 +20,8 @@ const router = useRouter()
 
 function handleClick(target: string) {
   if (target.startsWith('#')) {
+    history.replaceState(null, '', target)
     scrollToQuery(target)
-    router.replace(target)
   } else {
     router.push(target)
   }
