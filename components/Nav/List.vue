@@ -1,7 +1,4 @@
 <template>
-  <a v-if="!isMainPage" :href="hrefBack" class="back">
-    &lt; Back
-  </a>
   <nav class="nav">
     <NavItem v-for="target in targets" :target="target.target" :text="target.text" :active="target.active"
       :level="target.level" />
@@ -13,16 +10,6 @@ import type { TocLink } from '@nuxt/content'
 import type { NavItemProps } from './types'
 
 const route = useRoute()
-
-const hrefBack = computed(() => {
-  const segments = route.path.split('/')
-  segments.pop()
-  return segments.join('/') || '/'
-})
-
-const isMainPage = computed(() => {
-  return route.path === '/' || !route.path.startsWith('/projects')
-})
 
 const targetsMain = ref<NavItemProps[]>([
   {
@@ -102,7 +89,7 @@ const targetsDynamic = computed(() => {
 })
 
 const targets = computed(() => {
-  if (isMainPage.value) {
+  if (route.path === '/' || !route.path.startsWith('/projects')) {
     return targetsMain.value
   } else if (route.path == '/projects/' || route.path == '/projects') {
     return targetsProjects.value
@@ -156,10 +143,6 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.back {
-  margin-top: 1rem;
-}
-
 .nav {
   display: flex;
   flex-direction: column;

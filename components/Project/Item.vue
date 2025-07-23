@@ -17,6 +17,7 @@
           </div>
         </div>
       </div>
+      <!-- TODO: add tags for techs -->
     </div>
   </a>
 </template>
