@@ -8,7 +8,7 @@ try {
 
   console.log('Creating .nojekyll and CNAME files...');
   fs.writeFileSync('dist/.nojekyll', '');
-  fs.writeFileSync('dist/CNAME', 'khusyasy.com');
+  fs.writeFileSync('dist/CNAME', 'khusyasy.my.id');
 
   console.log('Deploying to GitHub Pages...');
   ghpages.publish('dist', { dotfiles: true }, function (err) {
