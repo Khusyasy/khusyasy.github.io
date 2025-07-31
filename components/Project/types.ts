@@ -5,4 +5,5 @@ export interface Project {
   cover_image: string;
   date: Date;
   category: string;
+  tags: Array<string>;
 }

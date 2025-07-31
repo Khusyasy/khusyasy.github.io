@@ -66,6 +66,7 @@ const projects = computed(() => {
       cover_image: item.meta.cover_image || '',
       date: item.meta.date ? new Date(item.meta.date) : new Date(),
       category: item.meta.category,
+      tags: item.meta.tags || [],
     };
     return project;
   })

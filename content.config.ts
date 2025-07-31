@@ -12,6 +12,7 @@ export default defineContentConfig({
           date: z.date(),
           category: z.enum(['web-dev', 'data-ai-llms', 'mobile-dev']),
           cover_image: z.string(),
+          tags: z.array(z.string()),
         })
       })
     })

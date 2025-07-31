@@ -10,6 +10,9 @@
       <p>
         {{ description }}
       </p>
+      <div class="tag-container">
+        <div class="tag" v-for="tag in tags" :key="tag">{{ tag }}</div>
+      </div>
       <div class="footer">
         <div class="info">
           <div>
@@ -17,7 +20,6 @@
           </div>
         </div>
       </div>
-      <!-- TODO: add tags for techs -->
     </div>
   </a>
 </template>
@@ -35,6 +37,7 @@ const {
   url,
   cover_image,
   date,
+  tags,
 } = props.data
 
 </script>
@@ -58,6 +61,11 @@ const {
     }
 
     .footer {
+      color: $primary-1;
+    }
+
+    .tag {
+      background-color: transparent;
       color: $primary-1;
     }
   }
@@ -127,5 +135,23 @@ const {
     align-items: center;
     gap: 0.25em;
   }
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.25em;
+}
+
+.tag {
+  border: solid 1px $primary-1;
+  background-color: $primary-1;
+  color: $black;
+  padding: 0.2em 0.5em;
+  border-radius: 2em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
 }
 </style>

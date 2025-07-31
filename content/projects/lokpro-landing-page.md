@@ -2,32 +2,41 @@
 date: 2021-07-20
 category: web-dev
 cover_image: /images/projects/lokpro-landing-page/event-landing-page.png
+tags:
+  - React.js
+  - Material-UI
+  - Figma
+  - Netlify
 ---
 
-# Event and E-book Landing Page using React.js
+# Responsive Landing Pages for Marketing Campaigns
+Designed and developed two landing pages to promote a new event and an e-book from @loker.programmer.
 
-Designed and developed a landing page to enhance user engagement for @loker.programmer event and e-book.
+- Links:
+  - [Event Landing Page](https://lokpro-event.netlify.app/)
+  - [E-book Landing Page](https://lokpro-ebook.netlify.app/)
 
 ## Overview
+- Role: Web Developer Intern
+- Problem/Goal: The main goal was to create two separate landing pages for a marketing campaign for @loker.programmer, event and e-book. These pages needed to be visually appealing, responsive, and attract users to register for the event or download the e-book. The design will also need to be consistent with the company's branding materials, including the logo, name, and main color scheme.
 
-Live Website:
-- [Event Landing Page](https://lokpro-event.netlify.app/)
-- [E-book Landing Page](https://lokpro-ebook.netlify.app/)
 
-@loker.programmer is a media/news company mainly focusing on providing job opportunities and resources for programmers in Indonesia. When I was a Web Developer Intern at @loker.programmer, I was tasked with designing and developing a landing page for an event and an e-book. The goal was to create an engaging and informative page that would attract users and encourage them to participate in the event and download the e-book.
+### Key Features
+- Developed two separate Single Page Applications (SPA) using React.js.
+- Implemented a consistent and modern design using Material-UI based on the company's branding materials.
+- Included specific sections such as a hero section, event details or e-book description, and a call-to-action (CTA) section.
+- Make sure the pages are responsive and optimized for performance and SEO.
+
+### Tech Stack
+- Frontend: React.js
+- Styling: CSS, Material-UI
+- Design: Figma
+- Deployment: Netlify
 
 ## Development Process
+My process began with creating design mockups in Figma to establish a design that is aligned with the company's brand. After receiving approval, I then develop the landing pages as Single Page Applications using React.js, which allowed for interactivity in the page. I used Material-UI for styling to ensure a clean and modern user interface, while still allowing customization to match the brand's color scheme and typography. Finally, both of the sites were deployed using Netlify.
 
-I need to develop two separate landing pages, one for the event and one for the e-book. First, I created the design mockups using Figma, ensuring that both pages had a consistent look and feel with the given branding materials, including the logo, name, and the main color scheme of the company. The design also need to include specific sections given, such as a hero section, event details or e-book description, and the most important part, a call-to-action (CTA) section that encourages users to register for the event or download the e-book.
-
-> sorry I have lost the design files, so I cannot show you the design mockups
-
-Then, after the design is approved by my supervisor, I started the project using React.js for the development of these pages and create a Single Page App (SPA), as it is still just a simple landing page, but I wanted to add some dynamic interactivity to the page. I used React components to structure the page, ensuring that each section was modular and reusable. I also used Matrial-UI for the styling and icons, which provided a clean and modern look to the pages while still customizable to match the design needed.
-
-Finally, I deployed both landing pages on Netlify, making them accessible to users. The deployment process was straightforward, and I ensured that both pages were optimized for performance and SEO.
-
-## Results
-The landing pages were successfully launched and received positive feedback from both the team and users. The event and e-book have increased user engagement, with around 26.32% more users registered for the event and downloaded the e-book compared to previous campaigns.
+### Documentation
 
 > <https://lokpro-event.netlify.app/>
 
@@ -41,8 +50,5 @@ The landing pages were successfully launched and received positive feedback from
 
 ![E-book Landing Page 2](/images/projects/lokpro-landing-page/ebook-landing-page-2.png)
 
-## Technologies Used
-- React.js
-- Material-UI for styling
-- Figma for design
-- Netlify for deployment
+## Results
+The landing pages were successfully launched and received positive feedback from both the team and users. These pages have increased the user engagement, with around **26.32% more users** registered for the event and downloaded the e-book compared to previous campaigns.
