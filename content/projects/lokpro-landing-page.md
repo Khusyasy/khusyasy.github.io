@@ -1,7 +1,7 @@
 ---
 date: 2021-07-20
 category: web-dev
-cover_image: /images/projects/lokpro-landing-page/event-landing-page.png
+cover_image: /images/projects/lokpro-landing-page/event-landing-page.jpg
 tags:
   - React.js
   - Material-UI
@@ -40,15 +40,15 @@ My process began with creating design mockups in Figma to establish a design tha
 
 > <https://lokpro-event.netlify.app/>
 
-![Event Landing Page 1](/images/projects/lokpro-landing-page/event-landing-page.png)
+![Event Landing Page 1](/images/projects/lokpro-landing-page/event-landing-page.jpg)
 
-![Event Landing Page 2](/images/projects/lokpro-landing-page/event-landing-page-2.png)
+![Event Landing Page 2](/images/projects/lokpro-landing-page/event-landing-page-2.jpg)
 
 > <https://lokpro-ebook.netlify.app/>
 
-![E-book Landing Page 1](/images/projects/lokpro-landing-page/ebook-landing-page.png)
+![E-book Landing Page 1](/images/projects/lokpro-landing-page/ebook-landing-page.jpg)
 
-![E-book Landing Page 2](/images/projects/lokpro-landing-page/ebook-landing-page-2.png)
+![E-book Landing Page 2](/images/projects/lokpro-landing-page/ebook-landing-page-2.jpg)
 
 ## Results
 The landing pages were successfully launched and received positive feedback from both the team and users. These pages have increased the user engagement, with around **26.32% more users** registered for the event and downloaded the e-book compared to previous campaigns.

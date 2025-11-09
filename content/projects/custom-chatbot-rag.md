@@ -1,7 +1,7 @@
 ---
 date: 2024-09-20
 category: data-ai-llms
-cover_image: /images/projects/custom-chatbot-rag/chatbot-result.png
+cover_image: /images/projects/custom-chatbot-rag/chatbot-result.jpg
 tags:
     - Langchain
     - Huggingface
@@ -34,21 +34,21 @@ At the start of the project, the first step I do is researching and planning the
 
 ### Documentation
 
-![Retrieval-Augmented Generation (RAG) System Flowchart](/images/projects/custom-chatbot-rag/rag-system.png)
+![Retrieval-Augmented Generation (RAG) System Flowchart](/images/projects/custom-chatbot-rag/rag-system.jpg)
 
 RAG system is built by combining Retrieval and Generation:
 - Retrieval: process used to search relevant information from the knowledge base.
 - Generation: process for LLM model to generate answers based on the data found.
 
-![System Architecture](/images/projects/custom-chatbot-rag/system-architecture.png)
+![System Architecture](/images/projects/custom-chatbot-rag/system-architecture.jpg)
 
-![Knowledge Base Flowchart](/images/projects/custom-chatbot-rag/knowledge-base.png)
+![Knowledge Base Flowchart](/images/projects/custom-chatbot-rag/knowledge-base.jpg)
 
-![Chatbot System Flowchart](/images/projects/custom-chatbot-rag/chatbot-system.png)
+![Chatbot System Flowchart](/images/projects/custom-chatbot-rag/chatbot-system.jpg)
 
 ## Results
 
-![Chatbot Interaction Example](/images/projects/custom-chatbot-rag/chatbot-result.png)
+![Chatbot Interaction Example](/images/projects/custom-chatbot-rag/chatbot-result.jpg)
 
 - The RAG-based LLM chatbot was successfully developed as a prototype and can be accessed via `WhatsApp` for ease of use.
 - The chatbot can accurately answer specific questions related to Telkom, tested manually with 67 questions showed that the chatbot achieved an **88.81% accuracy** rate.
