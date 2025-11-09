@@ -21,6 +21,8 @@ const route = useRoute()
 
 const { data: page } = await useProject(route.path)
 
+// TODO: error project not found at start om deployed
+
 useSeoMeta({
   title: page?.value?.title || 'Project Not Found',
   description: page?.value?.meta?.description || 'Details about the project are not available.',

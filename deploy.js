@@ -2,9 +2,10 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const ghpages = require('gh-pages');
 
+// TODO: change to use github actions
 try {
   console.log('Building the project...');
-  execSync('npm install && npm run generate', { stdio: 'inherit' });
+  execSync('npm install && npm run build:gh', { stdio: 'inherit' });
 
   console.log('Creating .nojekyll and CNAME files...');
   fs.writeFileSync('dist/.nojekyll', '');

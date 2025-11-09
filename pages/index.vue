@@ -1,6 +1,7 @@
 <template>
   <div class="content-wrapper">
     <div class="section" id="about">
+      <!-- TODO: ubah about -->
       <h2 class="section-title">About</h2>
       <div class="section-content">
         <p>
@@ -22,6 +23,7 @@
         </p>
       </div>
     </div>
+    <!-- TODO: tambahin skills -->
     <div class="section" id="projects">
       <h2 class="section-title">Recent Project</h2>
       <div class="section-content">
