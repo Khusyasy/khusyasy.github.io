@@ -29,9 +29,9 @@
       <div class="section-content">
         <ProjectList :projects="projects" />
       </div>
-      <a href="/projects" target="_self">
+      <NuxtLink to="/projects" target="_self">
         See all projects
-      </a>
+      </NuxtLink>
     </div>
     <div class="section" id="blogs">
       <h2 class="section-title">Recent Blog Post</h2>
@@ -56,7 +56,7 @@ import type { Experience } from '@/components/Exp/types'
 import type { Project } from '@/components/Project/types'
 
 
-const { data } = await useProjects()
+const { data } = useProjects()
 
 const projects = computed(() => {
   if (!data.value) return [];

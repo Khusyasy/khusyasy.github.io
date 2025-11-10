@@ -1,5 +1,5 @@
 <template>
-  <a ref="item" class="navitem" :class="{
+  <NuxtLink ref="item" class="navitem" :class="{
     active: active,
     'text-highlight': active,
     'level-1': level === 1,
@@ -8,7 +8,7 @@
     'level-4': level === 4,
   }" :href="target" @click.prevent="handleClick(target)">
     {{ text }}
-  </a>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">

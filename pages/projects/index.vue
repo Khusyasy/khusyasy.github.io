@@ -29,7 +29,7 @@ useSeoMeta({
   description: 'Explore projects and portfolio showcasing my work and contributions.',
 })
 
-const { data } = await useProjects()
+const { data } = useProjects()
 
 const projects = computed(() => {
   if (!data.value) return [];

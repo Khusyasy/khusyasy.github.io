@@ -58,7 +58,11 @@ const targetsProjects = ref<NavItemProps[]>([
   },
 ])
 
-const { data: page } = await useProject(route.path)
+const path = computed(() => route.path)
+const { data: page } = useAsyncData(
+  () => path.value,
+  async () => await queryCollection('content').path(path.value).first()
+)
 
 const targetsDynamic = computed(() => {
   if (!page.value?.body?.toc?.links) {

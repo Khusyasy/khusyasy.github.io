@@ -11,7 +11,7 @@
       <h2>
         Project not found {{ route.path }}
       </h2>
-      <a class="text-highlight" href="/">Go back to home</a>
+      <NuxtLink class="text-highlight" to="/">Go back to home</NuxtLink>
     </div>
   </div>
 </template>
@@ -19,13 +19,15 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: page } = await useProject(route.path)
-
-// TODO: error project not found at start om deployed
+const path = computed(() => route.path)
+const { data: page } = useAsyncData(
+  () => path.value,
+  async () => await queryCollection('content').path(path.value).first()
+)
 
 useSeoMeta({
   title: page?.value?.title || 'Project Not Found',
-  description: page?.value?.meta?.description || 'Details about the project are not available.',
+  // description: page?.value?.meta?.description || 'Details about the project are not available.',
   ogImage: page?.value?.meta?.cover_image || null,
 })
 </script>

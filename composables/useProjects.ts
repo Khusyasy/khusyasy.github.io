@@ -1,4 +1,4 @@
-export const useProjects = async () => await useAsyncData('projects', async () => {
+export const useProjects = () => useAsyncData('projects', async () => {
   const data = await queryCollection('content').all()
   data.sort((a, b) => {
     // sort descending

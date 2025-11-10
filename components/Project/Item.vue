@@ -1,5 +1,5 @@
 <template>
-  <a class="card project" :href="url">
+  <NuxtLink class="card project" :to="url">
     <div class="image-container">
       <img :src="cover_image" alt="" />
     </div>
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-  </a>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">

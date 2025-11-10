@@ -1,13 +1,13 @@
 <template>
   <div class="breadcrumbs" v-if="segments.length > 1">
-    <a v-if="!isMainPage" :href="hrefBack">
+    <NuxtLink v-if="!isMainPage" :to="hrefBack">
       &lt; back
-    </a>
+    </NuxtLink>
     <span style="margin: 0 0.5rem;">|</span>
     <template v-for="segment in segments" :key="segment.to" class="breadcrumb">
-      <a :href="segment.to">
+      <NuxtLink :to="segment.to">
         {{ segment.text }}
-      </a>
+      </NuxtLink>
       <span v-if="segment !== segments[segments.length - 1]">/</span>
     </template>
   </div>
