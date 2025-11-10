@@ -2,7 +2,7 @@
   <div class="content-wrapper">
     <div class="section" id="about">
       <!-- TODO: ubah about -->
-      <h2 class="section-title">About</h2>
+      <h2 class="section-title">About Me</h2>
       <div class="section-content">
         <p>
           I love building things to solve real world problems, mainly focusing on
@@ -23,9 +23,26 @@
         </p>
       </div>
     </div>
-    <!-- TODO: tambahin skills -->
+
+
+    <div class="section" id="technologies">
+      <h2 class="section-title">Technologies</h2>
+      <div class="section-content">
+        <p>
+          Languages, Frameworks, and Tools that I frequently use
+        </p>
+
+        <div class="icons">
+          <div v-for="icon in icons" :key="icon.name" class="icon">
+            <img width="64" height="64" :src="icon.src" :alt="icon.name + ' Logo'" />
+            {{ icon.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="section" id="projects">
-      <h2 class="section-title">Recent Project</h2>
+      <h2 class="section-title">Recent Projects</h2>
       <div class="section-content">
         <ProjectList :projects="projects" />
       </div>
@@ -34,7 +51,7 @@
       </NuxtLink>
     </div>
     <div class="section" id="blogs">
-      <h2 class="section-title">Recent Blog Post</h2>
+      <h2 class="section-title">Recent Blog Posts</h2>
       <div class="section-content">
         <BlogList />
       </div>
@@ -78,6 +95,77 @@ const projects = computed(() => {
   })
 })
 
+const icons = [
+  {
+    name: 'JavaScript',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+  },
+  {
+    name: 'TypeScript',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+  },
+  {
+    name: 'Vue.js',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
+  },
+  {
+    name: 'Nuxt.js',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxt/nuxt-original.svg',
+  },
+  {
+    name: 'React.js',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+  },
+  {
+    name: 'Node.js',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
+  },
+  {
+    name: 'Express.js',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg',
+  },
+  {
+    name: 'MongoDB',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
+  },
+  {
+    name: 'MySQL',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+  },
+  {
+    name: 'SQLite',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg',
+  },
+  {
+    name: 'Python',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+  },
+  {
+    name: 'HTML5',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
+  },
+  {
+    name: 'CSS3',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
+  },
+  {
+    name: 'TailwindCSS',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+  },
+  {
+    name: 'Figma',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
+  },
+  {
+    name: 'Git',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+  },
+  {
+    name: 'GitHub',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+  },
+]
+
 const experiences: Experience[] = [
   {
     date: 'Jul 2024 – Aug 2024',
@@ -118,6 +206,35 @@ const experiences: Experience[] = [
 
   @include device('mobile') {
     gap: 3rem;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  transition: transform 0.2s ease-in-out;
+  width: 64px;
+  height: auto;
+
+  &>img {
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    background-color: rgba($white, 1);
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
 </style>

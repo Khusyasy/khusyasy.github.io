@@ -19,6 +19,12 @@ const targetsMain = ref<NavItemProps[]>([
     level: 1,
   },
   {
+    target: "#technologies",
+    text: "Technologies",
+    active: false,
+    level: 1,
+  },
+  {
     target: "#projects",
     text: "Projects",
     active: false,

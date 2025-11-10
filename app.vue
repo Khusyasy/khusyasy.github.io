@@ -34,6 +34,16 @@ onMounted(() => {
   window.addEventListener('mousemove', updateMouse)
   window.addEventListener('scroll', updateScroll)
 })
+
+useHead({
+  link: [
+    {
+      rel: 'stylesheet',
+      type: 'text/css',
+      href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
+    }
+  ]
+})
 </script>
 
 <style lang="scss" scoped>
