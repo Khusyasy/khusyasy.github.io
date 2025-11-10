@@ -61,7 +61,7 @@ const targetsProjects = ref<NavItemProps[]>([
 const path = computed(() => route.path)
 const { data: page } = await useAsyncData(
   () => path.value,
-  async () => await queryCollection('content').path(path.value).first()
+  async () => await queryCollection('content').path(path.value).first() || {} as any
 )
 
 const targetsDynamic = computed(() => {

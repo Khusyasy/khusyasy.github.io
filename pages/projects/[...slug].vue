@@ -22,7 +22,7 @@ const route = useRoute()
 const path = computed(() => route.path)
 const { data: page } = await useAsyncData(
   () => path.value,
-  async () => await queryCollection('content').path(path.value).first()
+  async () => await queryCollection('content').path(path.value).first() || {} as any
 )
 
 useSeoMeta({
