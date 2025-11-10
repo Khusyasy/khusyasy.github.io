@@ -59,7 +59,7 @@ const targetsProjects = ref<NavItemProps[]>([
 ])
 
 const path = computed(() => route.path)
-const { data: page } = useAsyncData(
+const { data: page } = await useAsyncData(
   () => path.value,
   async () => await queryCollection('content').path(path.value).first()
 )
@@ -156,9 +156,9 @@ onMounted(() => {
   overflow-y: auto;
   height: 100%;
   width: 100%;
-  border-top: 1px solid rgba($primary-2, 0.5);
-  border-bottom: 1px solid rgba($primary-2, 0.5);
-  border-radius: 1px;
+  border-top: 3px solid rgba($primary-2, 0.3);
+  border-bottom: 3px solid rgba($primary-2, 0.3);
+  border-radius: 3px;
 
   @include device('mobile') {
     display: none;

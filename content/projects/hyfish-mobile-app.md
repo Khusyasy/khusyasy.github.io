@@ -2,9 +2,14 @@
 date: 2024-06-30
 category: mobile-dev
 cover_image: /images/projects/hyfish-mobile-app/hyfish-app-1.jpg
+tags:
+    - Android Studio
+    - Kotlin
+    - TensorFlow
+    - Figma
 ---
 
-# HyFish: HyFish: AI-Powered Fisheries Mobile Application
+# HyFish: AI-Powered Fisheries Mobile Application
 
 Led the mobile development of HyFish, that uses machine learning to assess fish freshness and identify species, while also serving as an educational and community platform for the fisheries community.
 

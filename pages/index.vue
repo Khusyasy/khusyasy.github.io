@@ -55,8 +55,12 @@
 import type { Experience } from '@/components/Exp/types'
 import type { Project } from '@/components/Project/types'
 
+useSeoMeta({
+  title: 'Khusyasy\'s Portfolio',
+  description: 'I love building things to solve real world problems, mainly focusing on website development and data science. I enjoy working with TypeScript, JavaScript, Vue.js, Nuxt, and Python for NLP. I am flexible and open to new opportunities to collaborate with others and create impactful digital solutions.',
+})
 
-const { data } = useProjects()
+const { data } = await useProjects()
 
 const projects = computed(() => {
   if (!data.value) return [];
@@ -110,10 +114,10 @@ const experiences: Experience[] = [
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 6rem;
 
   @include device('mobile') {
-    gap: 4rem;
+    gap: 3rem;
   }
 }
 </style>

@@ -19,14 +19,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
-      title: 'Khusyasy',
-      meta: [
-        {
-          name: 'description',
-          content:
-            'I love building things to solve real world problems, mainly focusing on website development and data science. I enjoy working with TypeScript, JavaScript, Vue.js, Nuxt, and Python for NLP. I am flexible and open to new opportunities to collaborate with others and create impactful digital solutions.',
-        },
-      ],
     },
   },
   devtools: { enabled: true },

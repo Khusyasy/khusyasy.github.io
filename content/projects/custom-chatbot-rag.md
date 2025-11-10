@@ -14,7 +14,7 @@ tags:
 Developed a prototype WhatsApp chatbot using a Large Language Model (LLM) with Retrieval-Augmented Generation (RAG) to provide efficient and accurate customer service.
 
 ## Overview
-- Role: Data Analyst / AI Programmer Intern
+- Role: Data Analyst / AI Engineer Intern
 - Problem/Goal: This project is aimed to increase the efficiency of Telkom's customer service by developing a 24/7 automated chatbot. The main goals is to improve customer experience by providing fast and accurate responses to customer questions that is easily accessible via `WhatsApp`.
 
 ### Key Features

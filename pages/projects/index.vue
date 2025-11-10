@@ -29,7 +29,7 @@ useSeoMeta({
   description: 'Explore projects and portfolio showcasing my work and contributions.',
 })
 
-const { data } = useProjects()
+const { data } = await useProjects()
 
 const projects = computed(() => {
   if (!data.value) return [];
@@ -56,10 +56,10 @@ const projectsMobileDev = computed(() => projects.value.filter(p => p.category =
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 6rem;
 
   @include device('mobile') {
-    gap: 4rem;
+    gap: 3rem;
   }
 }
 </style>
