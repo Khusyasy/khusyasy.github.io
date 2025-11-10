@@ -13,7 +13,7 @@
       <div class="footer">
         <div class="info">
           <div>
-            {{ formatDate(published_timestamp) }}
+            {{ formatDate(published_at) }}
           </div>
           <div>
             <IconLove :size="16" />
@@ -45,7 +45,7 @@ const {
   description,
   url,
   cover_image,
-  published_timestamp,
+  published_at,
   tags,
   comments_count,
   positive_reactions_count

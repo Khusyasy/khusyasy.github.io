@@ -10,16 +10,16 @@ export interface APIArticle {
   comments_count: number;
   public_reactions_count: number;
   collection_id: number | null;
-  published_timestamp: Date;
+  published_timestamp: string; // Date
   positive_reactions_count: number;
   cover_image: string;
   social_image: string;
   canonical_url: string;
-  created_at: Date;
-  edited_at: Date;
+  created_at: string; // Date
+  edited_at: string; // Date
   crossposted_at: null;
-  published_at: Date;
-  last_comment_at: Date;
+  published_at: string; // Date
+  last_comment_at: string; // Date
   reading_time_minutes: number;
   tag_list: string[];
   tags: string;
@@ -42,7 +42,7 @@ export interface Blog {
   description: string;
   url: string;
   cover_image: string;
-  published_timestamp: string;
+  published_at: Date;
   tags: string[];
   comments_count: number;
   positive_reactions_count: number;

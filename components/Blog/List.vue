@@ -20,7 +20,7 @@ const blogs = computed(() => {
       description: data.description,
       url: data.url,
       cover_image: data.cover_image,
-      readable_publish_date: data.readable_publish_date,
+      published_at: new Date(data.published_at),
       tags: data.tag_list,
       comments_count: data.comments_count,
       positive_reactions_count: data.positive_reactions_count,
