@@ -64,10 +64,10 @@ const targetsProjects = ref<NavItemProps[]>([
   },
 ])
 
-const path = computed(() => route.path)
 const { data: page } = await useAsyncData(
-  () => path.value,
-  async () => await queryCollection('content').path(path.value).first() || {} as any
+  `page-${route.path}`,
+  async () => await queryCollection('content').path(route.path).first() || {} as any,
+  { watch: [() => route.path] }
 )
 
 const targetsDynamic = computed(() => {

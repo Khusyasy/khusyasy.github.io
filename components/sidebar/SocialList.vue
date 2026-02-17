@@ -3,7 +3,8 @@
     <div class="icons">
       <SidebarSocialItem icon="linkedin"></SidebarSocialItem>
       <SidebarSocialItem icon="github"></SidebarSocialItem>
-      <SidebarSocialItem icon="kaggle"></SidebarSocialItem>
+      <SidebarSocialItem icon="leetcode"></SidebarSocialItem>
+      <!-- <SidebarSocialItem icon="kaggle"></SidebarSocialItem> -->
       <SidebarSocialItem icon="devto"></SidebarSocialItem>
     </div>
     <a class="link" href="mailto:luthfik.job@gmail.com" target="_blank" rel="noopener noreferrer">
