@@ -36,7 +36,7 @@ const { date, company, position, info, tags } = props.data
   font-size: 1rem;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-in-out;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 
   &:hover .tag {
     background-color: $primary-1;
@@ -95,7 +95,7 @@ h4 {
   background-color: transparent;
   color: $primary-1;
   padding: 0.2em 0.5em;
-  border-radius: 2em;
+  border-radius: 1em;
   font-size: 0.8rem;
   transition: all 0.2s ease-in-out;
 }

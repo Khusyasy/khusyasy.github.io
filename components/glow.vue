@@ -15,21 +15,21 @@ const scrollY = useState<number>('scrollY')
 const currPos = ref({ x: 0, y: 0 })
 const targetPos = ref({ x: 0, y: 0 })
 
-const currSize = ref(160)
-const targetSize = ref(160)
+const currSize = ref(200)
+const targetSize = ref(200)
 
 watchEffect(() => {
   targetPos.value.x = mouseX.value + scrollX.value
   targetPos.value.y = mouseY.value + scrollY.value
   const diff = Math.abs(currPos.value.x - targetPos.value.x) + Math.abs(currPos.value.y - targetPos.value.y)
-  targetSize.value = Math.max(40, 160 - (diff / 2))
+  targetSize.value = Math.max(20, 200 - (diff))
 })
 
 onMounted(() => {
   setInterval(() => {
-    currPos.value.x = lerp(currPos.value.x, targetPos.value.x, 0.4)
-    currPos.value.y = lerp(currPos.value.y, targetPos.value.y, 0.4)
-    currSize.value = lerp(currSize.value, targetSize.value, 0.4)
+    currPos.value.x = lerp(currPos.value.x, targetPos.value.x, 0.6)
+    currPos.value.y = lerp(currPos.value.y, targetPos.value.y, 0.6)
+    currSize.value = lerp(currSize.value, targetSize.value, 0.1)
   }, 10)
 })
 </script>

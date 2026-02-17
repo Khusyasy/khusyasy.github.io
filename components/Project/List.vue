@@ -3,7 +3,7 @@
     <p>No projects found.</p>
   </template>
   <template v-else>
-    <ProjectItem v-for="(project, i) in projects" :key="i" :data="project" />
+    <ProjectItem v-for="project in projects" :key="project.url" :data="project" />
   </template>
 </template>
 

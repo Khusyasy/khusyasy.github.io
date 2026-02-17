@@ -14,7 +14,7 @@
   font-size: 1rem;
   margin: 0.5rem 1rem;
   transition: all 0.2s ease-in-out;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   text-decoration: none;
   opacity: 0.5;
   min-height: 7rem;

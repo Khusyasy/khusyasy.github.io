@@ -26,7 +26,7 @@ import type { Project } from '@/components/Project/types';
 
 useSeoMeta({
   title: 'Khusyasy\'s Projects',
-  description: 'Explore projects and portfolio showcasing my work and contributions.',
+  description: 'Explore portfolio showcasing my works and contributions.',
 })
 
 const { data } = await useProjects()

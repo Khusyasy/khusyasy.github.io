@@ -4,7 +4,7 @@ category: web-dev
 cover_image: /images/projects/dydaily-tracker-website/dydaily-preview-1.jpg
 tags:
   - Vue.js
-  - Nuxt.js
+  - Nuxt
   - Tailwind CSS
   - Figma
   - Github Pages
@@ -53,14 +53,14 @@ Designed and developed a Progressive Web Application (PWA) for DyDaily, a produc
 ### Tech Stack
 - Language: TypeScript
 - Frontend: Vue.js
-- Backend: Nuxt.js
+- Backend: Nuxt
 - Styling: CSS, Tailwind CSS
 - Deployment: Github Pages
 - Design: Figma
 
 ## Development Process
 
-This project is mainly focused on being a static web app with offline capabilities, so I chose to use Vue.js Nuxt.js to build a PWA, this framework is great for building a dynamic frontend application with good performance, great routing support, and easy way to deploy for Github Pages.
+This project is mainly focused on being a static web app with offline capabilities, so I chose to use Vue.js Nuxt to build a PWA, this framework is great for building a dynamic frontend application with good performance, great routing support, and easy way to deploy for Github Pages.
 
 At first this project was built only using JavaScript, but later migrated to TypeScript for better type safety and maintainability. Tailwind CSS is chosen for highly customized and responsive styling, without writing too much custom CSS if using traditional CSS approach, which helps reduce development time significantly.
 

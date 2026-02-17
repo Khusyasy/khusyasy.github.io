@@ -50,7 +50,7 @@ const {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-in-out;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   text-decoration: none;
   color: $white;
   min-height: 7rem;
@@ -65,8 +65,8 @@ const {
     }
 
     .tag {
-      background-color: transparent;
-      color: $primary-1;
+      background-color: $primary-1;
+      color: $black;
     }
   }
 
@@ -80,7 +80,7 @@ const {
 .image-container {
   flex: 1;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   width: 50%;
   max-width: 18ch;
   border: solid 2px $primary-2;
@@ -110,7 +110,7 @@ const {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  color: $primary-2;
+  color: $primary-1;
   transition: all 0.2s ease-in-out;
 
 
@@ -146,10 +146,10 @@ const {
 
 .tag {
   border: solid 1px $primary-1;
-  background-color: $primary-1;
-  color: $black;
-  padding: 0.2em 0.5em;
-  border-radius: 2em;
+  background-color: transparent;
+  color: $primary-1;
+  padding: 0.25em 0.5em;
+  border-radius: 1em;
   font-size: 0.8rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out;

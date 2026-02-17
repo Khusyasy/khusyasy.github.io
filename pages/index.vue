@@ -5,7 +5,7 @@
       <h2 class="section-title">About Me</h2>
       <div class="section-content">
         <p>
-          I love building things to solve real world problems, mainly focusing on
+          I am a Fullstack Developer that love building things to solve real world problems, mainly focusing on
           <span class="text-highlight">website development</span> and <span class="text-highlight">data science</span>.
         </p>
         <p>
@@ -43,8 +43,16 @@
 
     <div class="section" id="projects">
       <h2 class="section-title">Recent Projects</h2>
+      <div class="tabs">
+        <!-- TODO: add tabs filter here -->
+          <div v-for="category in categories" :key="category.key" @click="selectedCategory = category" class="tab" :class="{
+          'active': category.key === selectedCategory.key
+          }">
+          {{ category.text }}
+          </div>
+      </div>
       <div class="section-content">
-        <ProjectList :projects="projects" />
+        <ProjectList :projects="filteredProjects" />
       </div>
       <NuxtLink to="/projects" target="_self">
         See all projects
@@ -59,7 +67,7 @@
         Read more posts on dev.to
       </a>
     </div>
-    <!-- <div class="section" id="experience">
+  <!-- <div class="section" id="experience">
     <h2 class="section-title">Experience</h2>
     <div class="section-content">
       <ExpItem v-for="exp in experiences" :data="exp" />
@@ -74,14 +82,14 @@ import type { Project } from '@/components/Project/types'
 
 useSeoMeta({
   title: 'Khusyasy\'s Portfolio',
-  description: 'I love building things to solve real world problems, mainly focusing on website development and data science. I enjoy working with TypeScript, JavaScript, Vue.js, Nuxt, and Python for NLP. I am flexible and open to new opportunities to collaborate with others and create impactful digital solutions.',
+  description: 'I am a Fullstack Developer that love building things to solve real world problems, mainly focusing on website development and data science. I enjoy working with TypeScript, JavaScript, Vue.js, Nuxt, and Python for NLP. I am flexible and open to new opportunities to collaborate with others and create impactful digital solutions.',
 })
 
 const { data } = await useProjects()
 
 const projects = computed(() => {
   if (!data.value) return [];
-  return data.value.slice(0, 3).map((item) => {
+  return data.value.map((item) => {
     const project: Project = {
       title: item.title,
       description: item.description,
@@ -93,6 +101,17 @@ const projects = computed(() => {
     };
     return project;
   })
+})
+
+const categories = [
+  { text: 'Website', key: 'web-dev' },
+  { text: 'Mobile', key: 'mobile-dev' },
+  { text: 'Data & AI', key: 'data-ai-llms' },
+]
+const selectedCategory = ref(categories[0])
+
+const filteredProjects = computed(() => {
+  return projects.value.filter(p => p.category === selectedCategory.value.key).slice(0, 3)
 })
 
 const icons = [
@@ -109,7 +128,7 @@ const icons = [
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
   },
   {
-    name: 'Nuxt.js',
+    name: 'Nuxt',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxt/nuxt-original.svg',
   },
   {
@@ -228,13 +247,38 @@ const experiences: Experience[] = [
   height: auto;
 
   &>img {
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     padding: 0.25rem;
     background-color: rgba($white, 1);
   }
 
   &:hover {
     transform: scale(1.1);
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: solid 1px $primary-1;
+  background-color: transparent;
+  color: $primary-1;
+
+  &.active {
+    background-color: $primary-1;
+    color: $black;
+  }
+
+  &:hover {
+    border: solid 1px $white;
+    color: $white;
   }
 }
 </style>

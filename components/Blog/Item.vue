@@ -61,7 +61,7 @@ const {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-in-out;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   text-decoration: none;
   color: $white;
   min-height: 7rem;
@@ -86,7 +86,7 @@ const {
 .image-container {
   flex: 1;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   width: 50%;
   max-width: 18ch;
   border: solid 2px $primary-2;
