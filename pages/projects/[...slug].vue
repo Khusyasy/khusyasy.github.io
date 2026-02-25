@@ -19,16 +19,12 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: page } = await useAsyncData(
-  `page-${route.path}`,
-  async () => await queryCollection('content').path(route.path).first() || {} as any,
-  { watch: [() => route.path] }
-)
+const { data: page } = await useProjectPage(route.path)
 
 useSeoMeta({
-  title: page.value?.title || 'Project not found',
-  description: page.value?.description || 'Details about the project are not available.',
-  ogImage: page.value?.meta?.cover_image || null,
+  title: () => page.value?.title || 'Project not found',
+  description: () => page.value?.description || 'Details about the project are not available.',
+  ogImage: () => page.value?.meta?.cover_image || null,
 })
 </script>
 
