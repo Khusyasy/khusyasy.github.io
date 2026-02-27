@@ -57,14 +57,14 @@ const { date, company, position, info, tags } = props.data
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 400;
   min-width: 18ch;
   opacity: 0.8;
   font-size: 0.8rem;
 }
 
 h4 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.25rem;
   line-height: 1;
   text-align: left;

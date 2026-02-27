@@ -35,14 +35,16 @@ onMounted(() => {
   window.addEventListener('scroll', updateScroll)
 })
 
+
 useHead({
   link: [
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
     {
       rel: 'stylesheet',
-      type: 'text/css',
-      href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
-    }
-  ]
+      href: 'https://fonts.googleapis.com/css2?family=Recursive:wght@400;600&display=swap',
+    },
+  ],
 })
 </script>
 

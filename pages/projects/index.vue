@@ -1,5 +1,5 @@
 <template>
-  <div class="content-wrapper">
+  <main class="content-wrapper">
     <div class="section" id="web-dev">
       <h2 class="section-title">Website Development</h2>
       <div class="section-content">
@@ -18,7 +18,7 @@
         <ProjectList :projects="projectsMobileDev" />
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">

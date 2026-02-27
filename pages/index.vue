@@ -1,5 +1,5 @@
 <template>
-  <div class="content-wrapper">
+  <main class="content-wrapper">
     <div class="section" id="about">
       <!-- TODO: ubah about -->
       <h2 class="section-title">About Me</h2>
@@ -67,13 +67,13 @@
         Read more posts on dev.to
       </a>
     </div>
-  <!-- <div class="section" id="experience">
-    <h2 class="section-title">Experience</h2>
-    <div class="section-content">
-      <ExpItem v-for="exp in experiences" :data="exp" />
-    </div>
-  </div> -->
-  </div>
+    <!-- <div class="section" id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="section-content">
+        <ExpItem v-for="exp in experiences" :data="exp" />
+      </div>
+    </div> -->
+  </main>
 </template>
 
 <script setup lang="ts">

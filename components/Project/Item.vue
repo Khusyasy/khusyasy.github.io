@@ -1,7 +1,12 @@
 <template>
   <NuxtLink class="card project" :to="url">
     <div class="image-container">
-      <img :src="cover_image" alt="" />
+      <NuxtImg
+        :src="cover_image"
+        alt=""
+        sizes="100vw sm:180px"
+        loading="lazy"
+      />
     </div>
     <div class="project-content">
       <h3 class="text-highlight">

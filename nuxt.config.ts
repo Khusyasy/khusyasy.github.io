@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         const pageName = project.replace('.md', '')
         ctx.routes.add(`/projects/${pageName}`)
       }
-    }
+    },
   },
   app: {
     head: {
@@ -49,4 +49,7 @@ export default defineNuxtConfig({
       },
     },
   },
-});
+  image: {
+    domains: ['media.dev.to', 'dev-to-uploads.s3.amazonaws.com'],
+  },
+})
