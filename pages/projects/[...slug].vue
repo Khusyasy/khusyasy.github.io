@@ -19,7 +19,8 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: page } = await useProjectPage(route.path)
+const path = computed(() => route.path)
+const { data: page } = await useProjectPage(path)
 
 useSeoMeta({
   title: () => page.value?.title || 'Project not found',
