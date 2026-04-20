@@ -1,25 +1,37 @@
 <template>
   <main class="content-wrapper">
     <div class="section" id="about">
-      <!-- TODO: ubah about -->
       <h2 class="section-title">About Me</h2>
       <div class="section-content">
         <p>
-          I am a Fullstack Developer that love building things to solve real world problems, mainly focusing on
-          <span class="text-highlight">website development</span> and <span class="text-highlight">data science</span>.
+          I'm a <span class="text-highlight">Fullstack Developer</span> who builds web systems that prioritize stability and type-safety. 
+          My main focus is the <span class="text-highlight">Nuxt / Vue.js</span> ecosystem, backed by a deep understanding of 
+          <span class="text-highlight">PostgreSQL</span> and <span class="text-highlight">Prisma ORM</span> for high-performance data operations.
         </p>
+
+        <ol>
+          <li>
+            <span class="text-highlight">Fullstack Web</span>: Handled the full development lifecycle from DB schema design and frontend implementation to SSR deployment.
+          </li>
+          <li>
+            <span class="text-highlight">AI</span>: Built an LLM-RAG prototype at Telkom Indonesia with 88%+ accuracy and &lt;6s response time.
+          </li>
+          <li>
+            <span class="text-highlight">Academic</span>: 3.95/4.00 Undergraduate GPA in Informatics.
+          </li>
+          <li>
+            <span class="text-highlight">Availability</span>: Currently pursuing a Master's in Informatics with a remote-flexible schedule, allowing for full-time commitment to engineering roles.
+          </li>
+        </ol>
+
         <p>
-          I enjoy working with <span class="text-highlight">TypeScript</span> / JavaScript using modern frameworks like
-          <span class="text-highlight">Vue.js</span> and <span class="text-highlight">Nuxt</span> to create responsive
-          and easy to use web apps.
-        </p>
-        <p>
-          I also like to explore data using <span class="text-highlight">Python</span> and SQL to give actionable
-          insights, especially with <span class="text-highlight">NLP</span> techniques.
+          Currently deep-diving into TypeScript, <span class="text-highlight">Nuxt 4</span>, <span class="text-highlight">Tailwind CSS v4</span>, 
+          and automating complex data synchronization workflows. I'm available for full-time opportunities (Remote/Hybrid) 
+          where I can bridge the gap between stable web architecture and intelligent automation.
         </p>
 
         <p>
-          I am flexible and open to new opportunities to collaborate with others and create impactful digital solutions.
+          Main Tech Stack: Nuxt, Vue.js, TypeScript, PostgreSQL, Prisma, Python (NLP/RAG).
         </p>
       </div>
     </div>
