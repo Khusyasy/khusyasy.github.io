@@ -107,6 +107,9 @@ const url = computed(() => {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .socialitem {
   display: block;
   background-color: transparent;

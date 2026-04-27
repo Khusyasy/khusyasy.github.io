@@ -54,6 +54,9 @@ const {
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .project {
   display: flex;
   flex-direction: row;

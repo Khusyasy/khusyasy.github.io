@@ -159,6 +159,9 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .nav {
   display: flex;
   flex-direction: column;

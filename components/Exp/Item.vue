@@ -38,6 +38,9 @@ const { date, company, position, info, tags } = props.data
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .experience {
   display: flex;
   flex-direction: row;

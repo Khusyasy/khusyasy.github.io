@@ -22,6 +22,9 @@
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .social-list {
   display: flex;
   flex-direction: column;

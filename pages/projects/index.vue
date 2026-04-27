@@ -68,6 +68,9 @@ const projectsMobileDev = computed(() => projects.value.filter(p => p.category =
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .content-wrapper {
   display: flex;
   flex-direction: column;

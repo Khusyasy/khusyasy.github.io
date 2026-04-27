@@ -36,6 +36,9 @@ function handleClick(target: string) {
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .navitem {
   width: fit-content;
   line-height: 1;

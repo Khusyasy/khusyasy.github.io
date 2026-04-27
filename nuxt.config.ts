@@ -29,16 +29,8 @@ export default defineNuxtConfig({
   },
   experimental: {
     payloadExtraction: false,
-  }, compatibilityDate: '2025-07-19',
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@use "@/assets/css/_colors.scss" as *; @use "@/assets/css/_mixins.scss" as *;',
-        },
-      },
-    },
   },
+  compatibilityDate: '2025-07-19',
   hooks: {
     'prerender:routes'(ctx) {
       const projects = fs.readdirSync('./content')

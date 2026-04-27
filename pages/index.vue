@@ -272,6 +272,9 @@ const icons = [
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .content-wrapper {
   display: flex;
   flex-direction: column;

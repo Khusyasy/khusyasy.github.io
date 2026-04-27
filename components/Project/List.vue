@@ -18,5 +18,3 @@ const { projects } = defineProps<{
   projects: Project[]
 }>()
 </script>
-
-<style lang="scss" scoped></style>

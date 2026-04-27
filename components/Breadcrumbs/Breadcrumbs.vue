@@ -53,6 +53,9 @@ const segments = computed(() => {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .breadcrumbs {
   display: flex;
   justify-items: start;

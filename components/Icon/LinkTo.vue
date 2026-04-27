@@ -21,6 +21,3 @@ const { size = 24 } = defineProps<{
   size?: number
 }>()
 </script>
-
-<style lang="scss" scoped>
-</style>

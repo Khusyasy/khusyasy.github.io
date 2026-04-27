@@ -13,6 +13,9 @@
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_colors.scss" as *;
+@use "@/assets/css/_mixins.scss" as *;
+
 .sidebar-wrapper {
   position: fixed;
   left: max(0px, calc((100vw - 1920px)/2));
