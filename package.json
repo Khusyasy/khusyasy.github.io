@@ -1,6 +1,7 @@
 {
   "name": "khusyasy-website",
   "private": true,
+  "packageManager": "pnpm@10.33.0",
   "scripts": {
     "build": "nuxt build",
     "build:gh": "nuxt build --preset github_pages",
