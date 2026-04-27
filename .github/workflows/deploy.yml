@@ -41,20 +41,21 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: nuxt
-
-      # - name: Restore cache
-      #   uses: actions/cache@v4
+      # disable, see https://github.com/nuxt/image/issues/1706#issuecomment-2781565624
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v5
       #   with:
-      #     path: |
-      #       .nuxt
-      #       .output
-      #     key: ${{ runner.os }}-nuxt-build-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.vue', '**/*.ts', '**/*.js') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-nuxt-build-
+      #     static_site_generator: nuxt
+
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .nuxt
+            .output
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.vue', '**/*.ts', '**/*.js') }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-build-
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
