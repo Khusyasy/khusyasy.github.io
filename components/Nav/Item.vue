@@ -1,12 +1,18 @@
 <template>
-  <a ref="item" class="navitem" :class="{
-    active: active,
-    'text-highlight': active,
-    'level-1': level === 1,
-    'level-2': level === 2,
-    'level-3': level === 3,
-    'level-4': level === 4,
-  }" :href="target" @click.prevent="handleClick(target)">
+  <a
+    ref="item"
+    class="navitem"
+    :class="{
+      'active': active,
+      'text-highlight': active,
+      'level-1': level === 1,
+      'level-2': level === 2,
+      'level-3': level === 3,
+      'level-4': level === 4,
+    }"
+    :href="target"
+    @click.prevent="handleClick(target)"
+  >
     {{ text }}
   </a>
 </template>
@@ -22,7 +28,8 @@ function handleClick(target: string) {
   if (target.startsWith('#')) {
     history.replaceState(null, '', target)
     scrollToQuery(target)
-  } else {
+  }
+  else {
     router.push(target)
   }
 }

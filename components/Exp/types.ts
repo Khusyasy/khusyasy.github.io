@@ -1,7 +1,7 @@
 export interface Experience {
   date: string
-  company?: string,
-  position: string,
+  company?: string
+  position: string
   info: string
   tags: string[]
 }
@@ -9,4 +9,3 @@ export interface Experience {
 export interface ExpItemProps {
   data: Experience
 }
-

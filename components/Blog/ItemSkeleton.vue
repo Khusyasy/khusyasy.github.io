@@ -1,5 +1,5 @@
 <template>
-  <a class="skeleton"></a>
+  <a class="skeleton" />
 </template>
 
 <script setup lang="ts">

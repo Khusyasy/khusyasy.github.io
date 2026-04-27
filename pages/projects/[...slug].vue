@@ -1,26 +1,44 @@
 <template>
-  <div class="cover-container" v-if="page?.meta?.cover_image">
-    <NuxtImg
-      :src="page.meta.cover_image"
-      :alt="page.title"
-      class="cover-image"
-      width="800"
-      height="450"
-      :preload="{ fetchPriority: 'high' }"
-    />
-  </div>
-  <span class="text-highlight" v-if="page?.title">
-    {{ page?.meta?.date ? formatDate(page.meta.date) : '' }}
-  </span>
-  <main class="content-wrapper">
-    <ContentRenderer v-if="page?.title" :value="page" class="content-renderer" />
-    <div v-else class="not-found">
-      <h2>
-        Project not found {{ route.path }}
-      </h2>
-      <NuxtLink class="text-highlight" to="/">Go back to home</NuxtLink>
+  <div>
+    <div
+      v-if="page?.meta?.cover_image"
+      class="cover-container"
+    >
+      <NuxtImg
+        :src="page.meta.cover_image"
+        :alt="page.title"
+        class="cover-image"
+        width="800"
+        height="450"
+        :preload="{ fetchPriority: 'high' }"
+      />
     </div>
-  </main>
+    <span
+      v-if="page?.title"
+      class="text-highlight"
+    >
+      {{ page?.meta?.date ? formatDate(page.meta.date) : '' }}
+    </span>
+    <main class="content-wrapper">
+      <ContentRenderer
+        v-if="page?.title"
+        :value="page"
+        class="content-renderer"
+      />
+      <div
+        v-else
+        class="not-found"
+      >
+        <h2>
+          Project not found {{ route.path }}
+        </h2>
+        <NuxtLink
+          class="text-highlight"
+          to="/"
+        >Go back to home</NuxtLink>
+      </div>
+    </main>
+  </div>
 </template>
 
 <script setup lang="ts">

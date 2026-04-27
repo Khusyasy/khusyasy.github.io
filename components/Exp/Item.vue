@@ -4,7 +4,10 @@
       {{ date }}
     </h3>
     <div class="exp-content">
-      <h4 class="company" v-if="company">
+      <h4
+        v-if="company"
+        class="company"
+      >
         {{ company }}
       </h4>
       <h4 class="position text-highlight">
@@ -14,7 +17,13 @@
         {{ info }}
       </p>
       <div class="tag-container">
-        <div class="tag" v-for="tag in tags" :key="tag">{{ tag }}</div>
+        <div
+          v-for="tag in tags"
+          :key="tag"
+          class="tag"
+        >
+          {{ tag }}
+        </div>
       </div>
     </div>
   </div>

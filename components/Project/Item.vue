@@ -1,5 +1,8 @@
 <template>
-  <NuxtLink class="card project" :to="url">
+  <NuxtLink
+    class="card project"
+    :to="url"
+  >
     <div class="image-container">
       <NuxtImg
         :src="cover_image"
@@ -16,7 +19,11 @@
         {{ description }}
       </p>
       <div class="tag-container">
-        <div class="tag" v-for="tag in tags" :key="tag">{{ tag }}</div>
+        <div
+          v-for="tag in tags"
+          :key="tag"
+          class="tag"
+        >{{ tag }}</div>
       </div>
       <div class="footer">
         <div class="info">
@@ -30,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Project } from './types';
+import type { Project } from './types'
 
 const props = defineProps<{
   data: Project
@@ -44,7 +51,6 @@ const {
   date,
   tags,
 } = props.data
-
 </script>
 
 <style lang="scss" scoped>
@@ -117,7 +123,6 @@ const {
   justify-content: space-between;
   color: $primary-1;
   transition: all 0.2s ease-in-out;
-
 
   .link {
     display: flex;

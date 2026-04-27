@@ -35,7 +35,6 @@ onMounted(() => {
   window.addEventListener('scroll', updateScroll)
 })
 
-
 useHead({
   link: [
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

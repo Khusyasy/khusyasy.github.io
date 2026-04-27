@@ -1,6 +1,8 @@
 <template>
   <div class="sidebar-wrapper">
-    <h1 class="top-text">Hello, I'm <span class="text-highlight">Khusyasy</span></h1>
+    <h1 class="top-text">
+      Hello, I'm <span class="text-highlight">Khusyasy</span>
+    </h1>
     <NavList />
     <SidebarSocialList />
   </div>

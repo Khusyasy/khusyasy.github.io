@@ -1,11 +1,16 @@
 <template>
   <main class="content-wrapper">
-    <div class="section" id="about">
-      <h2 class="section-title">About Me</h2>
+    <div
+      id="about"
+      class="section"
+    >
+      <h2 class="section-title">
+        About Me
+      </h2>
       <div class="section-content">
         <p>
-          I'm a <span class="text-highlight">Fullstack Developer</span> who builds web systems that prioritize stability and type-safety. 
-          My main focus is the <span class="text-highlight">Nuxt / Vue.js</span> ecosystem, backed by a deep understanding of 
+          I'm a <span class="text-highlight">Fullstack Developer</span> who builds web systems that prioritize stability and type-safety.
+          My main focus is the <span class="text-highlight">Nuxt / Vue.js</span> ecosystem, backed by a deep understanding of
           <span class="text-highlight">PostgreSQL</span> and <span class="text-highlight">Prisma ORM</span> for high-performance data operations.
         </p>
 
@@ -25,8 +30,8 @@
         </ol>
 
         <p>
-          Currently deep-diving into TypeScript, <span class="text-highlight">Nuxt 4</span>, <span class="text-highlight">Tailwind CSS v4</span>, 
-          and automating complex data synchronization workflows. I'm available for full-time opportunities (Remote/Hybrid) 
+          Currently deep-diving into TypeScript, <span class="text-highlight">Nuxt 4</span>, <span class="text-highlight">Tailwind CSS v4</span>,
+          and automating complex data synchronization workflows. I'm available for full-time opportunities (Remote/Hybrid)
           where I can bridge the gap between stable web architecture and intelligent automation.
         </p>
 
@@ -36,46 +41,82 @@
       </div>
     </div>
 
-
-    <div class="section" id="technologies">
-      <h2 class="section-title">Technologies</h2>
+    <div
+      id="technologies"
+      class="section"
+    >
+      <h2 class="section-title">
+        Technologies
+      </h2>
       <div class="section-content">
         <p>
           Languages, Frameworks, and Tools that I frequently use
         </p>
 
         <div class="icons">
-          <div v-for="icon in icons" :key="icon.name" class="icon">
-            <img width="64" height="64" :src="icon.src" :alt="icon.name + ' Logo'" />
+          <div
+            v-for="icon in icons"
+            :key="icon.name"
+            class="icon"
+          >
+            <img
+              width="64"
+              height="64"
+              :src="icon.src"
+              :alt="icon.name + ' Logo'"
+            >
             {{ icon.name }}
           </div>
         </div>
       </div>
     </div>
 
-    <div class="section" id="projects">
-      <h2 class="section-title">Recent Projects</h2>
+    <div
+      id="projects"
+      class="section"
+    >
+      <h2 class="section-title">
+        Recent Projects
+      </h2>
       <div class="tabs">
         <!-- TODO: add tabs filter here -->
-          <div v-for="category in categories" :key="category.key" @click="selectedCategory = category" class="tab" :class="{
-          'active': category.key === selectedCategory.key
-          }">
+        <div
+          v-for="category in categories"
+          :key="category.key"
+          class="tab"
+          :class="{
+            active: category.key === selectedCategory.key,
+          }"
+          @click="selectedCategory = category"
+        >
           {{ category.text }}
-          </div>
+        </div>
       </div>
       <div class="section-content">
         <ProjectList :projects="filteredProjects" />
       </div>
-      <NuxtLink to="/projects" target="_self">
+      <NuxtLink
+        to="/projects"
+        target="_self"
+      >
         See all projects
       </NuxtLink>
     </div>
-    <div class="section" id="blogs">
-      <h2 class="section-title">Recent Blog Posts</h2>
+    <div
+      id="blogs"
+      class="section"
+    >
+      <h2 class="section-title">
+        Recent Blog Posts
+      </h2>
       <div class="section-content">
         <BlogList />
       </div>
-      <a href="https://dev.to/khusyasy" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://dev.to/khusyasy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Read more posts on dev.to
       </a>
     </div>
@@ -89,7 +130,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Experience } from '@/components/Exp/types'
+// import type { Experience } from '@/components/Exp/types'
 import type { Project } from '@/components/Project/types'
 
 useSeoMeta({
@@ -100,7 +141,7 @@ useSeoMeta({
 const { data } = await useProjects()
 
 const projects = computed(() => {
-  if (!data.value) return [];
+  if (!data.value) return []
   return data.value.map((item) => {
     const project: Project = {
       title: item.title,
@@ -110,8 +151,8 @@ const projects = computed(() => {
       date: item.meta.date ? new Date(item.meta.date) : new Date(),
       category: item.meta.category,
       tags: item.meta.tags || [],
-    };
-    return project;
+    }
+    return project
   })
 })
 
@@ -197,36 +238,36 @@ const icons = [
   },
 ]
 
-const experiences: Experience[] = [
-  {
-    date: 'Jul 2024 – Aug 2024',
-    company: 'Telkom Indonesia',
-    position: 'Data Analyst Intern',
-    info: 'Developed a chatbot with the RAG method to provide accurate and context-aware responses, to improve user satisfaction. Designed interactive dashboards to analyze data and get insights.',
-    tags: ['Python', 'NLP', 'Tableau']
-  },
-  {
-    date: 'Apr 2022 – Feb 2024',
-    company: 'Freelance',
-    position: 'Fullstack Developer',
-    info: 'Provided solutions for data scraping automation or website development needs, using Node.js and Puppeteer.',
-    tags: ['JavaScript', 'Typescript', 'Node.js', 'Vue.js', 'Puppeteer']
-  },
-  {
-    date: 'Aug 2021 – Apr 2022',
-    company: 'PT. Emtres Indonesia',
-    position: 'Frontend Developer',
-    info: 'Building Vue.js website focused on data management and data input. Developed complex input forms with validations and unique requirements for climate-related data.',
-    tags: ['JavaScript', 'Vue.js']
-  },
-  {
-    date: 'July 2021',
-    company: '@loker.programmer',
-    position: 'Frontend Developer Intern',
-    info: 'Designed and developed event landing pages and an E-Book sales landing page using React.js. Supported marketing efforts through visually appealing and user-friendly designs.',
-    tags: ['JavaScript', 'React.js']
-  },
-]
+// const experiences: Experience[] = [
+//   {
+//     date: 'Jul 2024 – Aug 2024',
+//     company: 'Telkom Indonesia',
+//     position: 'Data Analyst Intern',
+//     info: 'Developed a chatbot with the RAG method to provide accurate and context-aware responses, to improve user satisfaction. Designed interactive dashboards to analyze data and get insights.',
+//     tags: ['Python', 'NLP', 'Tableau'],
+//   },
+//   {
+//     date: 'Apr 2022 – Feb 2024',
+//     company: 'Freelance',
+//     position: 'Fullstack Developer',
+//     info: 'Provided solutions for data scraping automation or website development needs, using Node.js and Puppeteer.',
+//     tags: ['JavaScript', 'Typescript', 'Node.js', 'Vue.js', 'Puppeteer'],
+//   },
+//   {
+//     date: 'Aug 2021 – Apr 2022',
+//     company: 'PT. Emtres Indonesia',
+//     position: 'Frontend Developer',
+//     info: 'Building Vue.js website focused on data management and data input. Developed complex input forms with validations and unique requirements for climate-related data.',
+//     tags: ['JavaScript', 'Vue.js'],
+//   },
+//   {
+//     date: 'July 2021',
+//     company: '@loker.programmer',
+//     position: 'Frontend Developer Intern',
+//     info: 'Designed and developed event landing pages and an E-Book sales landing page using React.js. Supported marketing efforts through visually appealing and user-friendly designs.',
+//     tags: ['JavaScript', 'React.js'],
+//   },
+// ]
 </script>
 
 <style lang="scss" scoped>

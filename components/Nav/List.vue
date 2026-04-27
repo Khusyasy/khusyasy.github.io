@@ -1,7 +1,13 @@
 <template>
   <nav class="nav">
-    <NavItem v-for="target in targets" :target="target.target" :text="target.text" :active="target.active"
-      :level="target.level" />
+    <NavItem
+      v-for="target in targets"
+      :key="target.target + '-' + target.text"
+      :target="target.target"
+      :text="target.text"
+      :active="target.active"
+      :level="target.level"
+    />
   </nav>
 </template>
 
@@ -13,20 +19,20 @@ const route = useRoute()
 
 const targetsMain = ref<NavItemProps[]>([
   {
-    target: "#about",
-    text: "About Me",
+    target: '#about',
+    text: 'About Me',
     active: false,
     level: 1,
   },
   {
-    target: "#technologies",
-    text: "Technologies",
+    target: '#technologies',
+    text: 'Technologies',
     active: false,
     level: 1,
   },
   {
-    target: "#projects",
-    text: "Projects",
+    target: '#projects',
+    text: 'Projects',
     active: false,
     level: 1,
   },
@@ -36,8 +42,8 @@ const targetsMain = ref<NavItemProps[]>([
   //   active: false,
   // },
   {
-    target: "#blogs",
-    text: "Blogs",
+    target: '#blogs',
+    text: 'Blogs',
     active: false,
     level: 1,
   },
@@ -45,20 +51,20 @@ const targetsMain = ref<NavItemProps[]>([
 
 const targetsProjects = ref<NavItemProps[]>([
   {
-    target: "#web-dev",
-    text: "Website Development",
+    target: '#web-dev',
+    text: 'Website Development',
     active: false,
     level: 2,
   },
   {
-    target: "#data-ai-llms",
-    text: "Data, AI, LLMs",
+    target: '#data-ai-llms',
+    text: 'Data, AI, LLMs',
     active: false,
     level: 2,
   },
   {
-    target: "#mobile-dev",
-    text: "Mobile Development",
+    target: '#mobile-dev',
+    text: 'Mobile Development',
     active: false,
     level: 2,
   },
@@ -98,7 +104,8 @@ const targetsDynamic = computed(() => {
 const targets = computed(() => {
   if (route.path === '/' || !route.path.startsWith('/projects')) {
     return targetsMain.value
-  } else if (route.path == '/projects/' || route.path == '/projects') {
+  }
+  else if (route.path == '/projects/' || route.path == '/projects') {
     return targetsProjects.value
   }
   return targetsDynamic.value
@@ -118,7 +125,8 @@ function handleSetActive() {
       if (bound.top < window.innerHeight / 2 && bound.bottom > window.innerHeight / 2) {
         nearestIndex = i
         break
-      } else {
+      }
+      else {
         const diff = Math.min(Math.abs(bound.top - window.innerHeight / 2), Math.abs(bound.bottom - window.innerHeight / 2))
         if (diff < nearestDiff) {
           nearestDiff = diff
@@ -135,9 +143,10 @@ function handleSetActive() {
 onMounted(() => {
   setInterval(handleSetActive, 10)
 
-  if (route.hash === "") {
+  if (route.hash === '') {
     scrollToTop()
-  } else {
+  }
+  else {
     for (let i = 0; i < targets.value.length; i++) {
       const target = targets.value[i]
       if (target.target === route.hash) {

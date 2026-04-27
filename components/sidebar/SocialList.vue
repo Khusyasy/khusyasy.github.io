@@ -1,13 +1,18 @@
 <template>
   <div class="social-list">
     <div class="icons">
-      <SidebarSocialItem icon="linkedin"></SidebarSocialItem>
-      <SidebarSocialItem icon="github"></SidebarSocialItem>
-      <SidebarSocialItem icon="leetcode"></SidebarSocialItem>
+      <SidebarSocialItem icon="linkedin" />
+      <SidebarSocialItem icon="github" />
+      <SidebarSocialItem icon="leetcode" />
       <!-- <SidebarSocialItem icon="kaggle"></SidebarSocialItem> -->
-      <SidebarSocialItem icon="devto"></SidebarSocialItem>
+      <SidebarSocialItem icon="devto" />
     </div>
-    <a class="link" href="mailto:luthfik.job@gmail.com" target="_blank" rel="noopener noreferrer">
+    <a
+      class="link"
+      href="mailto:luthfik.job@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <IconEmail :size="16" /> luthfik.job@gmail.com
     </a>
   </div>

@@ -4,9 +4,11 @@ export const useProjects = () => useAsyncData('projects', async () => {
     // sort descending
     if (b.meta.date > a.meta.date) {
       return 1
-    } else if (b.meta.date < a.meta.date) {
+    }
+    else if (b.meta.date < a.meta.date) {
       return -1
-    } else {
+    }
+    else {
       return 0
     }
   })

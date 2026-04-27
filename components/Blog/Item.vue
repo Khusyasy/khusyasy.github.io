@@ -1,5 +1,10 @@
 <template>
-  <a class="card blog" :href="url" target="_blank" rel="noopener noreferrer">
+  <a
+    class="card blog"
+    :href="url"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <div class="image-container">
       <NuxtImg
         :src="cover_image"
@@ -39,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Blog } from './types';
+import type { Blog } from './types'
 
 const props = defineProps<{
   data: Blog
@@ -51,11 +56,10 @@ const {
   url,
   cover_image,
   published_at,
-  tags,
+  // tags,
   comments_count,
-  positive_reactions_count
+  positive_reactions_count,
 } = props.data
-
 </script>
 
 <style lang="scss" scoped>
@@ -123,7 +127,6 @@ const {
   justify-content: space-between;
   color: $primary-2;
   transition: all 0.2s ease-in-out;
-
 
   .link {
     display: flex;

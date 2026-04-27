@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(
+withDefaults(
   defineProps<{
     src: string
     alt?: string
@@ -21,6 +21,6 @@ const props = withDefaults(
   {
     width: 800,
     height: 450,
-  }
+  },
 )
 </script>

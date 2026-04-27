@@ -1,9 +1,13 @@
 <template>
-  <div class="glow" tabindex="-1" :style="{
-    '--size': `${currSize}px`,
-    '--pos-x': `${currPos.x}px`,
-    '--pos-y': `${currPos.y}px`,
-  }"></div>
+  <div
+    class="glow"
+    tabindex="-1"
+    :style="{
+      '--size': `${currSize}px`,
+      '--pos-x': `${currPos.x}px`,
+      '--pos-y': `${currPos.y}px`,
+    }"
+  />
 </template>
 
 <script setup lang="ts">

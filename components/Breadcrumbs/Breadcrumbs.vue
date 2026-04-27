@@ -1,11 +1,23 @@
 <template>
-  <div class="breadcrumbs" v-if="segments.length > 1">
-    <NuxtLink v-if="!isMainPage" :to="hrefBack">
+  <div
+    v-if="segments.length > 1"
+    class="breadcrumbs"
+  >
+    <NuxtLink
+      v-if="!isMainPage"
+      :to="hrefBack"
+    >
       &lt; back
     </NuxtLink>
     <span style="margin: 0 0.5rem;">|</span>
-    <template v-for="segment in segments" :key="segment.to" class="breadcrumb">
-      <NuxtLink :to="segment.to">
+    <template
+      v-for="segment in segments"
+      :key="segment.to"
+    >
+      <NuxtLink
+        class="breadcrumb"
+        :to="segment.to"
+      >
         {{ segment.text }}
       </NuxtLink>
       <span v-if="segment !== segments[segments.length - 1]">/</span>
@@ -30,11 +42,11 @@ const segments = computed(() => {
   const splits = route.path.split('/').filter(Boolean)
   const res = splits.map((segment, index) => ({
     text: segment,
-    to: '/' + splits.slice(0, index + 1).join('/')
+    to: '/' + splits.slice(0, index + 1).join('/'),
   }))
   res.unshift({
     text: 'home',
-    to: '/'
+    to: '/',
   })
   return res
 })

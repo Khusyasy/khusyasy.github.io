@@ -1,19 +1,34 @@
 <template>
   <main class="content-wrapper">
-    <div class="section" id="web-dev">
-      <h2 class="section-title">Website Development</h2>
+    <div
+      id="web-dev"
+      class="section"
+    >
+      <h2 class="section-title">
+        Website Development
+      </h2>
       <div class="section-content">
         <ProjectList :projects="projectsWebDev" />
       </div>
     </div>
-    <div class="section" id="data-ai-llms">
-      <h2 class="section-title">Data, AI, and LLMs</h2>
+    <div
+      id="data-ai-llms"
+      class="section"
+    >
+      <h2 class="section-title">
+        Data, AI, and LLMs
+      </h2>
       <div class="section-content">
         <ProjectList :projects="projectsDataAI" />
       </div>
     </div>
-    <div class="section" id="mobile-dev">
-      <h2 class="section-title">Mobile Development</h2>
+    <div
+      id="mobile-dev"
+      class="section"
+    >
+      <h2 class="section-title">
+        Mobile Development
+      </h2>
       <div class="section-content">
         <ProjectList :projects="projectsMobileDev" />
       </div>
@@ -22,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Project } from '@/components/Project/types';
+import type { Project } from '@/components/Project/types'
 
 useSeoMeta({
   title: 'Khusyasy\'s Projects',
@@ -32,7 +47,7 @@ useSeoMeta({
 const { data } = await useProjects()
 
 const projects = computed(() => {
-  if (!data.value) return [];
+  if (!data.value) return []
   return data.value.map((item) => {
     const project: Project = {
       title: item.title,
@@ -42,14 +57,14 @@ const projects = computed(() => {
       date: item.meta.date ? new Date(item.meta.date) : new Date(),
       category: item.meta.category,
       tags: item.meta.tags || [],
-    };
-    return project;
+    }
+    return project
   })
 })
 
-const projectsWebDev = computed(() => projects.value.filter(p => p.category === 'web-dev'));
-const projectsDataAI = computed(() => projects.value.filter(p => p.category === 'data-ai-llms'));
-const projectsMobileDev = computed(() => projects.value.filter(p => p.category === 'mobile-dev'));
+const projectsWebDev = computed(() => projects.value.filter(p => p.category === 'web-dev'))
+const projectsDataAI = computed(() => projects.value.filter(p => p.category === 'data-ai-llms'))
+const projectsMobileDev = computed(() => projects.value.filter(p => p.category === 'mobile-dev'))
 </script>
 
 <style lang="scss" scoped>

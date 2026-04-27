@@ -3,12 +3,16 @@
     <p>No projects found.</p>
   </template>
   <template v-else>
-    <ProjectItem v-for="project in projects" :key="project.url" :data="project" />
+    <ProjectItem
+      v-for="project in projects"
+      :key="project.url"
+      :data="project"
+    />
   </template>
 </template>
 
 <script setup lang="ts">
-import type { Project } from './types';
+import type { Project } from './types'
 
 const { projects } = defineProps<{
   projects: Project[]
