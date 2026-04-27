@@ -148,7 +148,7 @@ onMounted(() => {
   }
   else {
     for (let i = 0; i < targets.value.length; i++) {
-      const target = targets.value[i]
+      const target = targets.value[i]!
       if (target.target === route.hash) {
         scrollToQuery(target.target)
         break

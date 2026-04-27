@@ -161,9 +161,10 @@ const categories = [
   { text: 'Mobile', key: 'mobile-dev' },
   { text: 'Data & AI', key: 'data-ai-llms' },
 ]
-const selectedCategory = ref(categories[0])
+const selectedCategory = ref(categories[0]!)
 
 const filteredProjects = computed(() => {
+  if (!selectedCategory.value) return []
   return projects.value.filter(p => p.category === selectedCategory.value.key).slice(0, 3)
 })
 
